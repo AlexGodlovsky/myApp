@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" >
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+</head>
+
+<body ng-app="BudgetApp" ng-cloak>
+
+<div ui-view></div>
+
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="node_modules/angular/angular.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>-->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-messages.min.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+
+<!-- Angular Material Library -->
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+<!--Angular UI-Route-->
+<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<!--Angular Messages-->
+<script src="node_modules/angular-messages/angular-messages.min.js"></script>
+
+<!--Material Icons-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--Firebase Lib-->
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+<!--AngularFire-->
+<script src="node_modules/angularfire/dist/angularfire.min.js"></script>
+
+<!--Firebase Config-->
+<script src="lib/config/firebaseConfig.js"></script>
+
+<!-- Your application bootstrap  -->
+<script type="text/javascript" src="app.js"></script>
+
+<!--Services-->
+<script src="app/services/firebase.auth.js"></script>
+<script src="app/services/firebase.database.js"></script>
+<script src="app/services/new.day.watcher.js"></script>
+
+<!--Modules-->
+<script src="app/login/login.module.js"></script>
+<script src="app/home/home.module.js"></script>
+<script src="app/home/buy/buy.module.js"></script>
+<script src="app/home/buy/actual/buy.actual.module.js"></script>
+<script src="app/home/buy/completed/buy.completed.module.js"></script>
+<script src="app/home/money/money.module.js"></script>
+<script src="app/home/money/dohod/dohod.module.js"></script>
+<script src="app/home/money/rashod/rashod.module.js"></script>
+<script src="app/home/tasks/tasks.module.js"></script>
+<script src="app/home/tasks/actual/tasks.actual.module.js"></script>
+<script src="app/home/tasks/completed/tasks.completed.module.js"></script>
+
+<script src="app/registration/registration.module.js"></script>
+
+<!--Configs-->
+<script src="lib/config/ui.config.js"></script>
+<script src="lib/config/language.config.js"></script>
+
+</body>
+</html>

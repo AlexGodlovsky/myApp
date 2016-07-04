@@ -1,0 +1,40 @@
+<md-content layout="row" layout-padding>
+
+    <div flex="40" flex-offset="30">
+        <md-card>
+
+            <md-card-actions layout="column">
+
+                <div layout="column">
+                    <md-input-container>
+                        <label>Email</label>
+                        <input ng-model="userTitle">
+                    </md-input-container>
+
+                    <md-input-container>
+                        <label>Password</label>
+                        <input ng-model="userPassword" type="password">
+                    </md-input-container>
+                </div>
+
+                <div layout="row">
+
+                    <md-button ng-click="goRegister()" class="md-raised md-primary">Register</md-button>
+
+                    <md-button ng-click="testFu()" class="md-raised md-primary">Test</md-button>
+
+                    <md-button ng-click="login()" class="md-raised md-primary">Login</md-button>
+
+                    <md-button ng-click="goHome()" class="md-raised md-primary">Home</md-button>
+
+                    <md-button ng-click="logout()" class="md-raised md-primary">testLogout</md-button>
+
+                </div>
+
+            </md-card-actions>
+        </md-card>
+    </div>
+
+
+
+</md-content>

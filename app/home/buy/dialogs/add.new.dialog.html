@@ -1,0 +1,39 @@
+<md-dialog aria-label="List dialog">
+      <md-dialog-content layout="row" layout-fill layout-wrap layout-align="space-around center" >
+
+          <md-input-container flex="60">
+              <label>Description</label>
+              <input ng-model="dialogName">
+          </md-input-container>
+
+          <md-input-container flex="20">
+              <label>Number</label>
+              <input type="number" ng-model="dialogAmount">
+          </md-input-container>
+
+          <md-input-container flex="20">
+              <label>Measure</label>
+              <input ng-model="dialogMeasure">
+          </md-input-container>
+
+          <md-datepicker flex="none" flex-offset="70"
+                         ng-model="dialogExpiryDate"
+                         md-placeholder="Expiry date">
+          </md-datepicker>
+
+
+      </md-dialog-content>
+
+      <md-dialog-actions layout="row" layout-align="space-around center">
+
+          <md-button ng-click="saveNew()" class="md-primary">
+              Save
+          </md-button>
+
+          <md-button ng-click="cancelDialog()" class="md-primary">
+              Cancel
+          </md-button>
+
+      </md-dialog-actions>
+
+    </md-dialog>,

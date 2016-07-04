@@ -1,0 +1,59 @@
+<md-content layout="row" layout-padding>
+
+    <div flex="40" flex-offset="30">
+        <md-card>
+
+            <md-card-actions layout="column">
+
+                <form name="register.form">
+
+                    <div layout="column">
+
+                        <md-input-container>
+                            <label>Email</label>
+                            <input ng-model="registerEmail" name="userEmail" type="email"
+                                   required>
+
+                            <span ng-show="register.form.userEmail.$error.email">Invalid email address.</span>
+
+                            <!--<div ng-messages="register.form.userEmail.$error">
+                                <div ng-message="required">This is required.</div>
+                                <div ng-message="pattern">Wrong Email.</div>
+                                <div ng-message="email">Wrong Email2.</div>
+                            </div>-->
+
+                        </md-input-container>
+
+                        <md-input-container>
+                            <label>Password</label>
+                            <input ng-model="userPassword" type="password">
+                        </md-input-container>
+
+                        <md-input-container>
+                            <label>Confirm Password</label>
+                            <input ng-model="confirmUserPassword" type="password" name="confirmPassword"
+                                   ng-pattern="{{userPassword}}">
+
+                            <span ng-show="register.form.confirmPassword.$error.pattern">Not equal.</span>
+                        </md-input-container>
+
+                    </div>
+
+                    <div layout="row">
+
+                        <md-button ng-click="registration()" class="md-raised md-primary">
+                            Register
+                        </md-button>
+
+
+                    </div>
+
+                </form>
+
+            </md-card-actions>
+        </md-card>
+    </div>
+
+
+
+</md-content>

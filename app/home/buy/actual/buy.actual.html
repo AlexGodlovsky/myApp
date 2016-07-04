@@ -1,0 +1,31 @@
+<div ng-repeat="item in list" layout="row">
+
+    <md-menu >
+        <!-- Trigger element is a md-button with an icon -->
+        <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open sample menu">
+            <md-icon> menu </md-icon>
+        </md-button>
+        <md-menu-content>
+
+            <md-menu-item>
+
+                <md-button ng-click="startNew($event)">Add new</md-button>
+
+                <md-button ng-click="startComplete($event, item)">Complete</md-button>
+
+                <md-button ng-click="startEdit($event, item)">Edit</md-button>
+
+                <md-button ng-click="startDelet($event, item)">Delet</md-button>
+
+            </md-menu-item>
+
+        </md-menu-content>
+    </md-menu>
+
+    <p flex>{{item.name}}</p>
+
+    <p flex="10">{{item.amount}}</p>
+
+    <p flex="10">{{item.measure}}</p>
+
+</div>

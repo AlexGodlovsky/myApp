@@ -1,0 +1,63 @@
+<md-content layout="column">
+
+    <div layout="row" layout-wrap layout-align="center">
+
+        <md-toolbar flex={{uiConfig.flex}}>
+            <div class="md-toolbar-tools">
+                <span>My App's Title</span>
+                <!-- fill up the space between left and right area -->
+                <span flex></span>
+
+                <md-button ng-click="test()" class="md-raised md-primary">
+                    {{langConf.menu.day}}
+                </md-button>
+
+                <md-button ui-sref="home.buy.actual" class="md-raised md-primary">
+                    {{langConf.menu.week}}
+                </md-button>
+
+                <md-button ui-sref="login" class="md-raised md-primary">
+                    <!--{{langConf.menu.month}}-->
+                    LOGIN
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <div class="md-toolbar-tools" flex={{uiConfig.flex}}>
+
+            <span>{{langConf.balance.balance}}</span>
+
+            <span flex></span>
+
+            <span>+</span>
+
+            <span>20.40</span>
+
+        </div>
+
+        <div class="homeShell" flex={{uiConfig.flex}}>
+
+            <md-content layout="row" layout-align="space-betwen center">
+
+                <md-button ui-sref="home.buy" flex="33">
+                    {{langConf.tabs.buy}}
+                </md-button>
+
+                <md-button ui-sref="home.tasks" flex>
+                    {{langConf.tabs.tasks}}
+                </md-button>
+
+                <md-button  ui-sref="home.money" flex>
+                    {{langConf.tabs.money}}
+                </md-button>
+
+            </md-content>
+
+            <div ui-view></div>
+
+        </div>
+
+
+    </div>
+
+</md-content>

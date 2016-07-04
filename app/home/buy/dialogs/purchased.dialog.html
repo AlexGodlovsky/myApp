@@ -1,0 +1,56 @@
+<md-dialog aria-label="List dialog">
+    <md-dialog-content layout="column" layout-fill layout-wrap layout-align="center stretch" >
+
+        <div flex>
+            <div layout="row" layout-fill>
+
+                <md-input-container flex="60">
+                    <label>Description</label>
+                    <input ng-model="dialogName">
+                </md-input-container>
+
+                <md-input-container flex="20">
+                    <label>Number</label>
+                    <input type="number" ng-model="dialogAmount">
+                </md-input-container>
+
+                <md-input-container flex="20">
+                    <label>Measure</label>
+                    <input ng-model="dialogMeasure">
+                </md-input-container>
+
+            </div>
+        </div>
+
+        <div flex>
+            <div layout="row" layout-fill>
+
+                <md-input-container flex="60">
+                    <label>The place of purchase</label>
+                    <input ng-model="dialogPlace">
+                </md-input-container>
+
+                <md-input-container flex="40">
+                    <label>Price</label>
+                    <input type="number" ng-model="dialogPrice">
+                </md-input-container>
+
+            </div>
+        </div>
+
+
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row" layout-align="space-around center">
+
+        <md-button ng-click="save()" class="md-primary">
+            Save
+        </md-button>
+
+        <md-button ng-click="cancelDialog()" class="md-primary">
+            Cancel
+        </md-button>
+
+    </md-dialog-actions>
+
+</md-dialog>,

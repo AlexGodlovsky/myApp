@@ -1,0 +1,24 @@
+<md-dialog aria-label="List dialog">
+    <md-dialog-content layout="column" layout-fill layout-wrap
+                       layout-margin layout-align="center stretch" >
+
+        <md-input-container flex>
+            <label>Description</label>
+            <input ng-model="dialogDescription">
+        </md-input-container>
+
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row" layout-align="space-around center">
+
+        <md-button ng-click="save()" class="md-primary">
+            Save
+        </md-button>
+
+        <md-button ng-click="cancelDialog()" class="md-primary">
+            Cancel
+        </md-button>
+
+    </md-dialog-actions>
+
+</md-dialog>,
