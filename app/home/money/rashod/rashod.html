@@ -1,1 +1,84 @@
-<h1>RASHOD</h1>
+<div id="rashodCont" layout="row" layout-wrap layout-fill>
+
+    <md-button ng-click="addNew($event)" class="md-icon-button"
+               aria-label="Open sample menu">
+        <md-icon> menu </md-icon>
+    </md-button>
+
+    <p flex class="md-title">Expenditure</p>
+
+    <p flex="10" class="md-title">{{value}}</p>
+
+    <div flex="100">
+        <div layout="column" layout-fill layout-wrap>
+
+            <md-divider flex></md-divider>
+
+            <md-list flex>
+
+                <md-list-item ui-sref="home.buy.completed">
+
+                    <div layout="row" layout-fill layout-wrap class="md-exclude">
+
+                        <p flex=>Pokupki</p>
+
+                        <p flex="10">{{allPokupki}}</p>
+
+                        <md-menu flex="10">
+                            <!-- Trigger element is a md-button with an icon -->
+                            <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open sample menu">
+                                <md-icon> menu </md-icon>
+                            </md-button>
+                            <md-menu-content>
+
+                                <md-menu-item>
+
+                                    <md-button ng-click="startEdit($event, item)">Edit</md-button>
+
+                                    <md-button ng-click="startDelet($event, item)">Delet</md-button>
+
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+
+                    </div>
+
+                </md-list-item>
+
+                <md-list-item ng-repeat=" item in db">
+
+                    <div layout="row" layout-fill layout-wrap>
+
+                        <p flex>{{item.name}}</p>
+
+                        <p flex="10">{{item.value}}</p>
+
+                        <md-menu flex="10">
+                            <!-- Trigger element is a md-button with an icon -->
+                            <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open sample menu">
+                                <md-icon> menu </md-icon>
+                            </md-button>
+                            <md-menu-content>
+
+                                <md-menu-item>
+
+                                    <md-button ng-click="startEdit($event, item)">Edit</md-button>
+
+                                    <md-button ng-click="startDelet($event, item)">Delet</md-button>
+
+                                </md-menu-item>
+
+                            </md-menu-content>
+                        </md-menu>
+
+                    </div>
+
+                </md-list-item>
+
+            </md-list>
+
+        </div>
+    </div>
+
+</div>

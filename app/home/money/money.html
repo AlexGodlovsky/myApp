@@ -1,6 +1,22 @@
-<div layout="row">
+<div layout="row" layout-wrap>
+    <link rel="stylesheet" href="app/home/money/money.css">
 
-    <md-button ui-sref="dohod"></md-button>
+<div flex="100">
+
+    <div layout="row" layout-fill>
+
+        <p class="md-title" flex="80">Available money</p>
+        <p class="md-title" flex>{{money}}</p>
+
+    </div>
+
+    <div layout="row" layout-fill>
+
+
+
+    </div>
+
+</div>
 
 
     <div flex="50" ui-view="dohod"></div>

@@ -47,4 +47,21 @@ var app = angular.module('BudgetApp', [
                 })
 
             });
+
+        $rootScope.$on("$locationChangeStart",
+            function(event, newUrl, oldUrl) {
+
+                var stateName = $state.current.name;
+
+                if(stateName == 'home.buy'){
+                    $state.go('home.buy.actual')
+                }
+
+                if(stateName == 'home.tasks'){
+                    $state.go('home.tasks.actual')
+                }
+
+
+
+            });
     });

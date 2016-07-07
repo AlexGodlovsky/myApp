@@ -23,23 +23,65 @@ angular.module('home.module',[
     })
 
     .controller('HomeCtrl',
-        ['$scope', 'firebaseAuth', 'uiConfig', 'firebaseDatabase', 'languageConfig', '$firebaseAuth', 'testAuth',
-        function($scope, firebaseAuth, uiConfig, firebaseDatabase, languageConfig, $firebaseAuth, testAuth) {
+        ['$scope', 'firebaseAuth', 'uiConfig', 'firebaseDatabase', 'languageConfig', 'newDayWatcher',
+        function($scope, firebaseAuth, uiConfig, firebaseDatabase, languageConfig, newDayWatcher) {
 
             $scope.uiConfig = uiConfig.home;
             $scope.langConf = languageConfig.eng.home;
 
-            var db = firebaseDatabase;
+            var pokupkiList = firebaseDatabase.buy.completed.getList();
 
+            pokupkiList.$loaded(function(res){
 
+                balanceWatcher()
 
-            $scope.test = function(){
+                pokupkiList.$watch(function (){
+                    balanceWatcher()
+                })
+            });
 
-                console.log(firebaseAuth.waitForSignIn)
+            var dayLimit = firebaseDatabase.dayLimit();
 
-                //console.log($firebaseAuth().$getAuth())
+            function balanceWatcher () {
+
+                var spent = getSumm();
+
+                var limit = dayLimit.$value;
+
+                $scope.balance = {
+                    icon : getSymbol(),
+                    value : getValue(),
+                    overrun : getOverrun()
+                };
+
+                function getSumm () {
+                    var result = 0;
+
+                    pokupkiList.forEach(function(item){
+                        result += Number(item.price)
+                    });
+
+                    return result
+                }
+
+                function getValue () {
+                    return Math.abs(limit - spent)
+                }
+
+                function getSymbol () {
+                    return limit>spent ? '+' : '-'
+                }
+
+                function getOverrun () {
+                    return limit>spent ? false : true
+                }
+
             }
 
+            $scope.balance = {
+                icon : '+',
+                value : 0,
+                overrun : false
+            }
 
-
-    }])
+    }]);

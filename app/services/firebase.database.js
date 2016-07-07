@@ -2,9 +2,11 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
 
     var db = firebase.database();
 
+    var mainDb = false;
+
     var pokupkiActual = firebaseAuth.waitForSignIn
         .then(function(res){
-            return $firebaseArray(db.ref('/kits/' +res.uid + '/currentDay/pokupkilist/actual'))
+            return $firebaseArray(db.ref('/kits/' +res.uid + '/day/list/pokupkilist/actual'))
                 .$loaded(function(load){
                     pokupkiActual =  load
                 })
@@ -12,7 +14,7 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
 
     var pokupkiCompleted = firebaseAuth.waitForSignIn
         .then(function(res){
-            return $firebaseArray(db.ref('/kits/' +res.uid + '/currentDay/pokupkilist/completed'))
+            return $firebaseArray(db.ref('/kits/' +res.uid + '/day/list/pokupkilist/completed'))
                 .$loaded(function(load){
                     pokupkiCompleted =  load
                 })
@@ -20,7 +22,7 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
 
     var tasksActual = firebaseAuth.waitForSignIn
         .then(function(res){
-            return $firebaseArray(db.ref('/kits/' +res.uid + '/currentDay/delalist/actual'))
+            return $firebaseArray(db.ref('/kits/' +res.uid + '/day/list/delalist/actual'))
                 .$loaded(function(load){
                     tasksActual =  load
                 })
@@ -28,14 +30,38 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
 
     var tasksCompleted = firebaseAuth.waitForSignIn
         .then(function(res){
-            return $firebaseArray(db.ref('/kits/' +res.uid + '/currentDay/delalist/completed'))
+            return $firebaseArray(db.ref('/kits/' +res.uid + '/day/list/delalist/completed'))
                 .$loaded(function(load){
                     tasksCompleted =  load
                 })
         });
 
+    var dohod = firebaseAuth.waitForSignIn
+        .then(function(res){
+            return $firebaseArray(db.ref('/kits/' +res.uid + '/day/list/budget/dohod'))
+                .$loaded(function(load){
+                    dohod =  load
+                })
+        });
+
+    var rashod = firebaseAuth.waitForSignIn
+        .then(function(res){
+            return $firebaseArray(db.ref('/kits/' +res.uid + '/day/list/budget/rashod'))
+                .$loaded(function(load){
+                    rashod =  load
+                })
+        });
+
 
     return {
+
+        dayLimit : function (){
+
+            var uid = firebaseAuth.userUid();
+
+            return $firebaseObject(db.ref('/kits/' +uid + '/day/list/daylimit'))
+
+        },
 
         buy : {
             actual : {
@@ -43,7 +69,9 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
                 getList : function (){
                     var uid = firebaseAuth.userUid();
 
-                    return $firebaseArray(db.ref('/kits/' +uid + '/currentDay/pokupkilist/actual'));
+                    var list = $firebaseArray(db.ref('/kits/' +uid + '/day/list/pokupkilist/actual'));
+
+                    return list
                 },
 
                 addNew : function(newItem) {
@@ -94,7 +122,9 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
                 getList : function (){
                     var uid = firebaseAuth.userUid();
 
-                    return $firebaseArray(db.ref('/kits/' +uid + '/currentDay/pokupkilist/completed'));
+                    var list = $firebaseArray(db.ref('/kits/' +uid + '/day/list/pokupkilist/completed'));
+
+                    return list
                 },
 
                 addNew : function(newItem) {
@@ -144,6 +174,7 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
 
             }
         },
+
         tasks : {
 
             actual : {
@@ -151,7 +182,7 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
                 getList : function (){
                     var uid = firebaseAuth.userUid();
 
-                    return $firebaseArray(db.ref('/kits/' +uid + '/currentDay/delalist/actual'));
+                    return $firebaseArray(db.ref('/kits/' +uid + '/day/list/delalist/actual'));
                 },
 
                 addNew : function(newItem) {
@@ -200,7 +231,7 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
                 getList : function (){
                     var uid = firebaseAuth.userUid();
 
-                    return $firebaseArray(db.ref('/kits/' +uid + '/currentDay/delalist/completed'));
+                    return $firebaseArray(db.ref('/kits/' +uid + '/day/list/delalist/completed'));
                 },
 
                 addNew : function(newItem) {
@@ -247,6 +278,72 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
 
             }
 
+        },
+
+        money : {
+            dohod : {
+
+                getList : function () {
+
+                    var uid = firebaseAuth.userUid();
+
+                    return $firebaseArray(db.ref('/kits/' +uid + '/day/list/budget/dohod'))
+
+                },
+
+                addNew : function (newItem){
+                    return dohod.$add(newItem)
+                },
+
+                edit : function (editedItem){
+
+                    var index = dohod.$indexFor(editedItem.$id);
+
+                    dohod[index].name = editedItem.name;
+                    dohod[index].value = editedItem.value;
+
+                    return dohod.$save(index);
+                },
+
+                remove : function(item){
+                    var record = dohod.$getRecord(item.$id);
+
+                    return dohod.$remove(record)
+                }
+
+            },
+
+            rashod : {
+
+                getList : function(){
+
+                    var uid = firebaseAuth.userUid();
+
+                    return $firebaseArray(db.ref('/kits/' +uid + '/day/list/budget/rashod'))
+
+                },
+
+                addNew : function (newItem){
+                    return rashod.$add(newItem)
+                },
+
+                edit : function (editedItem){
+
+                    var index = rashod.$indexFor(editedItem.$id);
+
+                    rashod[index].name = editedItem.name;
+                    rashod[index].value = editedItem.value;
+
+                    return rashod.$save(index);
+                },
+
+                remove : function(item){
+                    var record = rashod.$getRecord(item.$id);
+
+                    return rashod.$remove(record)
+                }
+
+            }
         },
 
         test : 'test'
