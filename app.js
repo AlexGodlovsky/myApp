@@ -4,7 +4,8 @@ var app = angular.module('BudgetApp', [
     'ui.router',
     'login.module',
     'home.module',
-    'registration.module'
+    'registration.module',
+    'dev.module',
     ])
 
     .config(function($mdThemingProvider) {
@@ -15,7 +16,7 @@ var app = angular.module('BudgetApp', [
 
     .config(function($stateProvider, $urlRouterProvider){
 
-        $urlRouterProvider.otherwise('home');
+        $urlRouterProvider.otherwise('home/buy/actual');
 
         $stateProvider
             .state('404',{
@@ -30,9 +31,38 @@ var app = angular.module('BudgetApp', [
 
 
 
-    .run(function(firebaseAuth, $rootScope, $state, $urlRouter, $location, $browser){
+    .run(function(firebaseAuth, $firebaseAuth, $rootScope, $state, $urlRouter, $location, $browser){
 
-        $rootScope.$on("$locationChangeStart",
+        $firebaseAuth().$requireSignIn()
+            .then(function(res){
+                console.log('Is authorised');
+                $state.go('home.buy');
+            })
+            .catch(function(err){
+                console.log('Is NOT authorised');
+                $state.go('login')
+            });
+
+        $firebaseAuth().$onAuthStateChanged(function(firebaseUser) {
+            if (!firebaseUser) {
+                $state.go('login')
+            } else {
+
+            }
+        });
+
+        $rootScope.$on("$locationChangeStart", function (event, newUrl, oldUrl){
+
+            if($firebaseAuth().$waitForSignIn()){
+                $browser.url(newUrl)
+            }
+            else{
+                $state.go('login');
+            }
+
+        });
+
+        /*$rootScope.$on("$locationChangeStart",
             function(event, newUrl, oldUrl) {
 
                 firebaseAuth.waitForSignIn.then(function(res){
@@ -45,6 +75,8 @@ var app = angular.module('BudgetApp', [
                         $state.go('login');
                     }
                 })
+
+                console.log('go')
 
             });
 
@@ -63,5 +95,5 @@ var app = angular.module('BudgetApp', [
 
 
 
-            });
+            });*/
     });

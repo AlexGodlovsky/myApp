@@ -1,63 +1,190 @@
-<md-content layout="column">
+<md-content  class="maxHeight" layout="row" id="mainCont">
 
-    <div layout="row" layout-wrap layout-align="center">
+    <div class="maxHeight" flex="60" flex-offset="20">
 
-        <md-toolbar flex={{uiConfig.flex}}>
-            <div class="md-toolbar-tools">
-                <span>My App's Title</span>
-                <!-- fill up the space between left and right area -->
+        <!--<div layout="row" layout-wrap layout-align="center">
+
+            <md-toolbar id="headerToolbar" flex={{uiConfig.flex}}>
+                <div class="md-toolbar-tools">
+                    <span>My App's Title</span>
+                    &lt;!&ndash; fill up the space between left and right area &ndash;&gt;
+                    <span flex></span>
+
+                    &lt;!&ndash;<md-button ng-click="test()" class="md-raised md-primary">
+                        {{langConf.menu.day}}
+                    </md-button>&ndash;&gt;
+
+                    <md-button ng-click="test()" class="md-raised md-primary">
+                        {{langConf.menu.day}}
+                    </md-button>
+
+                    <md-button ui-sref="dev" class="md-raised md-primary">
+                        {{langConf.menu.week}}
+                    </md-button>
+
+                    <md-button ui-sref="login" class="md-raised md-primary">
+                        &lt;!&ndash;{{langConf.menu.month}}&ndash;&gt;
+                        LOGIN
+                    </md-button>
+                </div>
+            </md-toolbar>
+
+            <div id="headerBalance" class="md-toolbar-tools" flex={{uiConfig.flex}}>
+
+                <span>{{langConf.balance.balance}}</span>
+
                 <span flex></span>
 
-                <md-button ng-click="test()" class="md-raised md-primary">
-                    {{langConf.menu.day}}
-                </md-button>
+                <span>{{balance.icon}}</span>
 
-                <md-button ui-sref="home.buy.actual" class="md-raised md-primary">
-                    {{langConf.menu.week}}
-                </md-button>
+                <span>{{balance.value | number:2}}</span>
 
-                <md-button ui-sref="login" class="md-raised md-primary">
-                    <!--{{langConf.menu.month}}-->
-                    LOGIN
-                </md-button>
             </div>
-        </md-toolbar>
 
-        <div class="md-toolbar-tools" flex={{uiConfig.flex}}>
+            <div class="homeShell" flex={{uiConfig.flex}}>
 
-            <span>{{langConf.balance.balance}}</span>
+                <div layout="column">
+                    <div flex>
+                        <md-content id="homeButtons" layout="row" layout-align="space-betwen center">
 
-            <span flex></span>
+                            <md-button ui-sref="home.buy.actual" flex="33">
+                                {{langConf.tabs.buy}}
+                            </md-button>
 
-            <span>{{balance.icon}}</span>
+                            <md-button ui-sref="home.tasks.actual" flex>
+                                {{langConf.tabs.tasks}}
+                            </md-button>
 
-            <span>{{balance.value | number:2}}</span>
+                            <md-button  ui-sref="home.money" flex>
+                                {{langConf.tabs.money}}
+                            </md-button>
+
+                        </md-content>
+                    </div>
+                    <div flex="50" ui-view></div>
+                </div>
+
+
+            </div>
+
+            &lt;!&ndash;<div class="homeShell" flex={{uiConfig.flex}}>
+
+                <md-content id="homeButtons" layout="row" layout-align="space-betwen center">
+
+                    <md-button ui-sref="home.buy.actual" flex="33">
+                        {{langConf.tabs.buy}}
+                    </md-button>
+
+                    <md-button ui-sref="home.tasks.actual" flex>
+                        {{langConf.tabs.tasks}}
+                    </md-button>
+
+                    <md-button  ui-sref="home.money" flex>
+                        {{langConf.tabs.money}}
+                    </md-button>
+
+                </md-content>
+
+                <div ui-view></div>
+
+            </div>&ndash;&gt;
+
+
+        </div>-->
+
+        <div class="maxHeight" layout="column" layout-fill id="interfaceContainer">
+
+            <md-toolbar id="headerToolbar" flex="none">
+                <div class="md-toolbar-tools">
+                    <span>My App's Title</span>
+                    <!-- fill up the space between left and right area -->
+                    <span flex></span>
+
+                    <!--<md-button ng-click="test()" class="md-raised md-primary">
+                        {{langConf.menu.day}}
+                    </md-button>-->
+
+                    <md-button ng-click="test()" class="md-raised md-primary">
+                        {{langConf.menu.day}}
+                    </md-button>
+
+                    <md-button ui-sref="dev" class="md-raised md-primary">
+                        {{langConf.menu.week}}
+                    </md-button>
+
+                    <md-button ui-sref="login" class="md-raised md-primary">
+                        <!--{{langConf.menu.month}}-->
+                        LOGIN
+                    </md-button>
+                </div>
+            </md-toolbar>
+
+            <div id="headerBalance" flex="none" class="md-toolbar-tools">
+
+                <span>{{langConf.balance.balance}}</span>
+
+                <span flex></span>
+
+                <span>{{balance.icon}}</span>
+
+                <span>{{balance.value | number:2}}</span>
+
+            </div>
+
+            <div class="homeShell overHidden displayFlex" flex>
+
+                <div class="maxWidth" layout="column">
+                    <div flex="none">
+                        <md-content id="homeButtons" layout="row" layout-align="space-betwen center">
+
+                            <md-button ui-sref="home.buy" flex="33">
+                                {{langConf.tabs.buy}}
+                            </md-button>
+
+                            <md-button ui-sref="home.tasks" flex>
+                                {{langConf.tabs.tasks}}
+                            </md-button>
+
+                            <md-button  ui-sref="home.money" flex>
+                                {{langConf.tabs.money}}
+                            </md-button>
+
+                        </md-content>
+                    </div>
+                    <div class="displayFlex" flex ui-view></div>
+                </div>
+
+
+            </div>
+
+            <div flex="5" style="background-color: #9E9E9E"></div>
+
+            <!--<div class="homeShell" flex={{uiConfig.flex}}>
+
+                <md-content id="homeButtons" layout="row" layout-align="space-betwen center">
+
+                    <md-button ui-sref="home.buy.actual" flex="33">
+                        {{langConf.tabs.buy}}
+                    </md-button>
+
+                    <md-button ui-sref="home.tasks.actual" flex>
+                        {{langConf.tabs.tasks}}
+                    </md-button>
+
+                    <md-button  ui-sref="home.money" flex>
+                        {{langConf.tabs.money}}
+                    </md-button>
+
+                </md-content>
+
+                <div ui-view></div>
+
+            </div>-->
+
 
         </div>
-
-        <div class="homeShell" flex={{uiConfig.flex}}>
-
-            <md-content layout="row" layout-align="space-betwen center">
-
-                <md-button ui-sref="home.buy" flex="33">
-                    {{langConf.tabs.buy}}
-                </md-button>
-
-                <md-button ui-sref="home.tasks" flex>
-                    {{langConf.tabs.tasks}}
-                </md-button>
-
-                <md-button  ui-sref="home.money" flex>
-                    {{langConf.tabs.money}}
-                </md-button>
-
-            </md-content>
-
-            <div ui-view></div>
-
-        </div>
-
 
     </div>
+
 
 </md-content>

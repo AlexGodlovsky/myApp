@@ -1,19 +1,53 @@
-<div layout="column" layout-fill>
+<div layout="column" class="maxWidth">
 
-    <div height="30px" flex md-swipe-left="cangeState()" md-swipe-right="cangeState()"></div>
+    <div flex="none" id="buyIndicator">
 
-    <div flex>
+        <div layout="row" layout-fill>
 
-        <div layour="row" layout-fill>
+            <a flex="5" class=" material-icons md-headline md-button md-ink-ripple flex" ng-click="addNew()">add_box</a>
 
-            <md-button ng-click="cangeState()">l</md-button>
+            <span flex="75" class="md-headline subHead">{{view | uppercase}}</span>
 
-            <md-button ng-click="cangeState()">r</md-button>
+            <a flex="20" class="md-headline md-button md-ink-ripple flex" ng-click="changeState()">&gt;</a>
 
         </div>
 
     </div>
 
-    <div ui-view flex></div>
+    <!--<div id="buy" ui-view flex></div>-->
+
+    <div id="buy" flex>
+
+        <div ng-repeat="item in list" layout="row">
+
+            <md-menu >
+                <!-- Trigger element is a md-button with an icon -->
+                <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open sample menu">
+                    <md-icon> menu </md-icon>
+                </md-button>
+                <md-menu-content>
+
+                    <md-menu-item>
+
+                        <md-button ng-click="startPurchasing($event, item)">Complete</md-button>
+
+                        <md-button ng-click="startEdit($event, item)">Edit</md-button>
+
+                        <md-button ng-click="startDelet($event, item)">Delet</md-button>
+
+                    </md-menu-item>
+
+                </md-menu-content>
+            </md-menu>
+
+            <p flex>{{item.name}}</p>
+
+            <p flex="10">{{item.amount}}</p>
+
+            <p flex="10">{{item.measure}}</p>
+
+        </div>
+
+    </div>
 
 </div>

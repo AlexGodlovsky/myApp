@@ -68,9 +68,13 @@ app.factory('newDayWatcher', function($firebaseObject, $firebaseArray, firebaseA
 
                         currentDay.lastDay = new Date().toDateString();
 
-                        currentDay.$save().then(function (){
-                            clearCurrentDay();
-                        });
+                        currentDay.$save()
+                            .then(function (){
+                                clearCurrentDay();
+                            })
+                            .catch(function(error){
+                                console.log(error)
+                            });
 
                     })
                     .catch(function(err){
@@ -88,8 +92,6 @@ app.factory('newDayWatcher', function($firebaseObject, $firebaseArray, firebaseA
                         pokupkilist : {
                             completed : currentDay.pokupkilist.completed
                         },
-
-                        daylimit : currentDay.daylimit,
 
                         budget : {
                             dohod : currentDay.budget.dohod,
@@ -129,6 +131,8 @@ app.factory('newDayWatcher', function($firebaseObject, $firebaseArray, firebaseA
 
                     currentDay.budget.dengi.startmoney.common = setNewStartMoney();
 
+                    currentDay.budget.dengi.dayLimit = setDayLimitMode(currentDay.budget.dengi.dayLimit);
+
                     currentDay.delalist.completed = {};
 
                     currentDay.pokupkilist.completed = {};
@@ -138,7 +142,43 @@ app.factory('newDayWatcher', function($firebaseObject, $firebaseArray, firebaseA
                     currentDay.budget.rashod = {};
 
                     currentDay.$save().then(function(){
+                        console.log('Day cleared.')
                      });
+
+                    function setDayLimitMode (dayLimit) {
+
+                        var mode = dayLimit.actual;
+
+                        var result = false;
+
+                        mode == 'float' ? result = setFloat(dayLimit) : result = dayLimit;
+
+                        return result;
+
+                        function setFloat (floatLimit) {
+
+                            floatLimit.float.daysLeft = setDaysLeft(floatLimit);
+
+                            return floatLimit;
+
+                            function setDaysLeft (){
+
+                                var lastUpdated = new Date(currentDay.lastDay);
+
+                                var today = new Date();
+
+                                today.setHours(0, 0, 0, 0);
+
+                                var dayPassed =  (Date.parse(today) - Date.parse(lastUpdated)) / 86400000;
+
+                                var currentLeft = floatLimit.float.daysLeft;
+
+                                return currentLeft - dayPassed
+                            }
+
+                        }
+                    }
+
 
                     function setNewStartMoney () {
 

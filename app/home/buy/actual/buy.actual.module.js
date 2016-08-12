@@ -197,4 +197,4 @@ angular.module('buy.actual.module',[
 
             };
 
-        }])
+        }]);

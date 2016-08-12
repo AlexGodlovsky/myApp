@@ -1,0 +1,77 @@
+<md-dialog flex="50">
+
+    <md-dialog-content>
+
+        <form name="addNewMoneyItem">
+
+            <div layout="column" layout-wrap layout-fill>
+
+                <p class="md-body-1" flex="100">Select type of </p>
+
+                <div flex="100">
+
+                    <div layout="row" layout-wrap layout-fill>
+
+                        <md-switch class="md-primary" flex="30" ng-change="changeMode('float')"
+                                   md-no-ink aria-label="Switch No Ink" ng-model="budgetMode.float">
+                            For period
+                        </md-switch>
+
+                        <md-input-container flex="35">
+                            <label>Num of days</label>
+                            <input type="number" min="1" ng-model="numOfDays">
+                        </md-input-container>
+
+                        <md-datepicker flex="35" ng-model="numDate" md-min-date="minDate"
+                                       md-placeholder="Enter date">
+
+                        </md-datepicker>
+
+                    </div>
+
+                </div>
+
+                <div flex="100">
+
+                    <div layout="row" layout-wrap layout-fill>
+
+                        <md-switch class="md-primary" flex="30" ng-change="changeMode('fixed')"
+                                   md-no-ink aria-label="Switch No Ink" ng-model="budgetMode.fixed">
+                            Limit per day
+                        </md-switch>
+
+                        <md-input-container flex="70">
+                            <label>Enter Limit</label>
+                            <input type="number" min="1" ng-model="limitPerDay">
+                        </md-input-container>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </form>
+
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+
+        <div flex>
+
+            <md-button ng-click="save()">
+                Save
+            </md-button>
+
+            <md-button ng-click="cancelDialog()">
+                Cancel
+            </md-button>
+
+        </div>
+
+    </md-dialog-actions>
+
+</md-dialog>
+

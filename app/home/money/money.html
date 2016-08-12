@@ -5,14 +5,22 @@
 
     <div layout="row" layout-fill>
 
+        <md-button class="md-icon-button" ng-click="setAvalableMoney()"
+                   aria-label="Edit avalable money">
+            <md-icon class="material-icons">menu</md-icon>
+        </md-button>
+
         <p class="md-title" flex="80">Available money</p>
-        <p class="md-title" flex>{{money}}</p>
+
+        <p class="md-title" flex>{{money | number:2}}</p>
 
     </div>
 
     <div layout="row" layout-fill>
 
-
+        <md-button ng-click="openSettings()" class="md-raised md-primary">
+            Open settings
+        </md-button>
 
     </div>
 

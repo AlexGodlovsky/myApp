@@ -1,8 +1,6 @@
-app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebaseArray){
+app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebaseArray, findKit, $q){
 
     var db = firebase.database();
-
-    var mainDb = false;
 
     var pokupkiActual = firebaseAuth.waitForSignIn
         .then(function(res){
@@ -52,15 +50,102 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
                 })
         });
 
+    var devDb = firebaseAuth.waitForSignIn.then(function(user){
+        return findKit.kitsId().then(function(kitId){
+            return $firebaseArray(db.ref('/kits/'+kitId+'/dev'))
+        })
+    });
+
+    var pokupki = false;
+
+    var tasks = false;
+
+
+
+
+
 
     return {
 
-        dayLimit : function (){
+        dev : {
+            first : function(){
+                return firebaseAuth.waitForSignIn.then(function (){
+                    return findKit.kitsId().then(function(kitId){
+                        return $firebaseObject(db.ref('/kits/'+kitId+'/dev'))
+                    })
+                })
+            },
 
-            var uid = firebaseAuth.userUid();
+            second : function () {
+                var deferred = $q.defer();
 
-            return $firebaseObject(db.ref('/kits/' +uid + '/day/list/daylimit'))
+                firebaseAuth.waitForSignIn.then(function () {
+                    findKit.kitsId().then(function (kitId) {
+                        var list = $firebaseObject(db.ref('/kits/' + kitId + '/day/list')).
+                            $loaded(function(res){
+                                deferred.resolve(res)
+                            })
+                            .catch(function(err){
+                                console.log(err)
+                            })
+                    })
+                });
 
+                return deferred.promise
+            },
+
+            third : function (){
+                var deferred = $q.defer();
+
+                firebaseAuth.waitForSignIn.then(function () {
+                    findKit.kitsId().then(function (kitId) {
+                        var list = $firebaseObject(db.ref('/kits/' + kitId + '/dev')).
+                            $loaded(function(res){
+                                deferred.resolve(res)
+                            })
+                            .catch(function(err){
+                                console.log(err)
+                            })
+                    })
+                })
+
+                return deferred.promise
+            }
+        },
+
+        main : {
+            getList : function () {
+                var deferred = $q.defer();
+
+                firebaseAuth.waitForSignIn.then(function () {
+                    findKit.kitsId().then(function (kitId) {
+                        var list = $firebaseObject(db.ref('/kits/' + kitId + '/day/list')).
+                            $loaded(function(res){
+                                deferred.resolve(res)
+                            })
+                            .catch(function(err){
+                                console.log(err)
+                            })
+                    })
+                });
+
+                return deferred.promise
+            },
+
+            saveList : function (obj){
+
+                var def = $q.defer();
+
+                obj.$save()
+                    .then(function(res){
+                        def.resolve(res)
+                    })
+                    .catch(function(error){
+                        def.reject(error)
+                    });
+
+                return def.promise;
+            }
         },
 
         buy : {
@@ -172,10 +257,83 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
                     return pokupkiCompleted.$save(index);
                 }
 
+            },
+
+            addNew : function(newItem) {
+
+                return pokupki.$add(newItem);
+            },
+
+            editItem : function (item, editedItem) {
+
+                var it = pokupki.$getRecord(item.$id);
+
+                var index = pokupki.$indexFor(it.$id);
+
+                for(var field in editedItem){
+                    pokupki[index][field] = editedItem[field];
+                }
+
+                return pokupki.$save(index);
+            },
+
+            purchasing : function(editedItem) {
+
+                var it = pokupki.$getRecord(editedItem.$id);
+
+                var index = pokupki.$indexFor(it.$id);
+
+                for(var field in editedItem){
+                    pokupki[index][field] = editedItem[field];
+                }
+
+                return pokupki.$save(index);
+            },
+
+            removeItem : function (item){
+
+                var it = pokupki.$getRecord(item.$id);
+
+                return pokupki.$remove(it)
+            },
+
+            getList : function(){
+                return pokupki;
+            },
+
+            initBuyList : function () {
+
+                var deferred = $q.defer();
+
+                if(pokupki){
+                    deferred.resolve(pokupki)
+                }
+                else{
+
+                    findKit.kitsId()
+                        .then(function(kitId){
+                            $firebaseArray(db.ref('/kits/' + kitId + '/day/list/pokupkilist'))
+                                .$loaded(function(arr){
+                                    pokupki = arr;
+                                    deferred.resolve(arr)
+                                })
+                                .catch(function(err){
+                                    console.log(err);
+                                    deferred.reject(err)
+                                })
+                        })
+                        .catch(function(err){
+                            console.log(err);
+                            deferred.reject(err)
+                        });
+
+                }
+
+                return deferred.promise
             }
         },
 
-        tasks : {
+        task : {
 
             actual : {
 
@@ -276,11 +434,93 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
                     return tasksCompleted.$save(index);
                 }
 
+            },
+
+            addNew : function(newItem) {
+
+                return tasks.$add(newItem);
+            },
+
+            editItem : function (item, editedItem) {
+
+                var it = tasks.$getRecord(item.$id);
+
+                var index = tasks.$indexFor(it.$id);
+
+                for(var field in editedItem){
+                    tasks[index][field] = editedItem[field];
+                }
+
+                return tasks.$save(index);
+            },
+
+            completeTask : function(editedItem) {
+
+                var it = tasks.$getRecord(editedItem.$id);
+
+                var index = tasks.$indexFor(it.$id);
+
+                for(var field in editedItem){
+                    tasks[index][field] = editedItem[field];
+                }
+
+                return tasks.$save(index);
+            },
+
+            removeItem : function (item){
+
+                var it = tasks.$getRecord(item.$id);
+
+                return tasks.$remove(it)
+            },
+
+            getList : function(){
+                return tasks;
+            },
+
+            initTaskList : function () {
+
+                var deferred = $q.defer();
+
+                if(tasks){
+                    deferred.resolve(tasks)
+                }
+                else{
+
+                    findKit.kitsId()
+                        .then(function(kitId){
+                            $firebaseArray(db.ref('/kits/' + kitId + '/day/list/delalist'))
+                                .$loaded(function(arr){
+                                    tasks = arr;
+                                    deferred.resolve(arr);
+                                })
+                                .catch(function(err){
+                                    console.log(err);
+                                    deferred.reject(err)
+                                })
+                        })
+                        .catch(function(err){
+                            console.log(err);
+                            deferred.reject(err)
+                        });
+
+                }
+
+                return deferred.promise
             }
 
         },
 
         money : {
+
+            dengi2 : function () {
+
+                var uid = firebaseAuth.userUid();
+
+                return $firebaseObject(db.ref('/kits/' +uid + '/day/list/budget/dengi'))
+
+            },
+
             dohod : {
 
                 getList : function () {
@@ -309,6 +549,18 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
                     var record = dohod.$getRecord(item.$id);
 
                     return dohod.$remove(record)
+                },
+
+                getAllDohod : function(){
+
+                    var result = 0;
+
+                    for(var item in dohod){
+                        result += dohod[item].value
+                    }
+
+                    return result;
+
                 }
 
             },
@@ -341,11 +593,22 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
                     var record = rashod.$getRecord(item.$id);
 
                     return rashod.$remove(record)
+                },
+
+                getAllRashod : function(){
+
+                    var result = 0;
+
+                    for(var item in rashod){
+                        console.log(rashod[item]).value
+                        result += rashod[item].value
+                    }
+
+                    return result;
+
                 }
 
             }
-        },
-
-        test : 'test'
+        }
     }
 });

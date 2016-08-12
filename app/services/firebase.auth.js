@@ -1,4 +1,4 @@
-app.provider('firebaseAuth', [function firebaseAuthProvider (){
+app.provider('firebaseAuth', [function firebaseAuthProvider ($firebaseAuth){
 
     this.getUser = function(){
 
@@ -31,7 +31,11 @@ app.provider('firebaseAuth', [function firebaseAuthProvider (){
 
             waitForSignIn : $firebaseAuth().$waitForSignIn().then(function(res){
                 return res
-            })
+            }),
+
+            test : function (){
+                return $firebaseAuth().$getAuth()
+            }
         }
     }
 }]);

@@ -15,73 +15,167 @@ angular.module('home.module',[
                 templateUrl: 'app/home/home.html',
                 controller : 'HomeCtrl',
                 resolve : {
-                    testAuth :  ['$firebaseAuth', function($firebaseAuth){
-                        return $firebaseAuth().$waitForSignIn();
-                    }]
+                    /*initList : ['firebaseDatabase', function(firebaseDatabase){
+                        return firebaseDatabase.buy.initList()
+                            .then(function(res){
+                                return res
+                            })
+                    }]*/
                 }
             })
     })
 
     .controller('HomeCtrl',
         ['$scope', 'firebaseAuth', 'uiConfig', 'firebaseDatabase', 'languageConfig', 'newDayWatcher',
-        function($scope, firebaseAuth, uiConfig, firebaseDatabase, languageConfig, newDayWatcher) {
+            'countingData',
+        function($scope, firebaseAuth, uiConfig, firebaseDatabase, languageConfig, newDayWatcher, countingData) {
 
             $scope.uiConfig = uiConfig.home;
             $scope.langConf = languageConfig.eng.home;
 
-            var pokupkiList = firebaseDatabase.buy.completed.getList();
+            firebaseDatabase.main.getList().then(function(res){
 
-            pokupkiList.$loaded(function(res){
+                console.log('lo')
+                db = res;
 
-                balanceWatcher()
+                db.$watch(function(){
+                    updateDayLimit();
+                    console.log('n')
+                });
 
-                pokupkiList.$watch(function (){
-                    balanceWatcher()
-                })
-            });
+                updateDayLimit()
 
-            var dayLimit = firebaseDatabase.dayLimit();
+            })
+                .catch(function(err){
+                    console.log(err)
+                });
 
-            function balanceWatcher () {
+            var db = false;
 
-                var spent = getSumm();
+            function updateDayLimit () {
 
-                var limit = dayLimit.$value;
+                var actualMode = getActualLimit();
 
-                $scope.balance = {
-                    icon : getSymbol(),
-                    value : getValue(),
-                    overrun : getOverrun()
-                };
+                actualMode == 'fixed' ? useFixed() : useFloat();
 
-                function getSumm () {
-                    var result = 0;
+                function getActualLimit () {
+                    return db.budget.dengi.dayLimit.actual
+                }
 
-                    pokupkiList.forEach(function(item){
-                        result += Number(item.price)
-                    });
+                function useFixed () {
+
+                    var limit = db.budget.dengi.dayLimit.fixed;
+
+                    setBalance(limit)
+
+                }
+
+                function useFloat () {
+                    var avalaibleMoney = getAvalaibleMoney();
+
+                    var daysLeft = db.budget.dengi.dayLimit.float.daysLeft;
+
+                    var limit = avalaibleMoney / daysLeft;
+
+                    setBalance(limit)
+
+                    function getAvalaibleMoney (){
+
+                        var startMoney = getStartmoney();
+
+                        var rashod = getAllRashod();
+
+                        var dohod = getAllDohod();
+
+                        return startMoney + dohod - rashod;
+
+                        console.log(startMoney + dohod - rashod);
+
+                        function getStartmoney () {
+
+                            var common = db.budget.dengi.startmoney.common;
+
+                            var nal = db.budget.dengi.startmoney.nal;
+
+                            var besnal = db.budget.dengi.startmoney.besnal;
+
+                            return common + nal + besnal
+                        }
+
+                        function getAllRashod () {
+
+                            var result = 0;
+
+                            for(var item in db.budget.rashod){
+
+                                result += db.budget.rashod[item].value
+
+                            }
+
+                            return result;
+                        }
+
+                        function getAllDohod () {
+
+                            var result = 0;
+
+                            for(var item in db.budget.dohod){
+
+                                result += db.budget.dohod[item].value
+
+                            }
+
+                            return result
+                        }
+                    }
+                }
+
+                function pokupkiCost () {
+                    var pokupkiList = db.pokupkilist.completed ?
+                        result = summCost(db.pokupkilist.completed)
+                        : result =  0;
+
+                    var result;
+
+                    function summCost (list) {
+                        var summ = 0;
+
+                        for(var item in list){
+                            summ += Number(list[item].price)
+                        }
+
+                        return summ
+                    }
 
                     return result
                 }
 
-                function getValue () {
-                    return Math.abs(limit - spent)
-                }
+                function setBalance (limit){
 
-                function getSymbol () {
-                    return limit>spent ? '+' : '-'
-                }
+                    var spent = pokupkiCost()
 
-                function getOverrun () {
-                    return limit>spent ? false : true
+                    limit - spent > 0 ?
+                        $scope.balance = {
+                            icon : '+',
+                            value : limit - spent,
+                            overrun : false
+                        }
+                        :
+                        $scope.balance = {
+                            icon : '-',
+                            value : Math.abs(limit - spent),
+                            overrun : true
+                        };
                 }
-
-            }
+            };
 
             $scope.balance = {
                 icon : '+',
                 value : 0,
                 overrun : false
-            }
+            };
 
+            $scope.test = function (){
+                firebaseAuth.logout();
+            };
     }]);

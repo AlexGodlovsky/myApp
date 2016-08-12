@@ -20,149 +20,327 @@
     <favorites_list name="loginPage" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.608914">
+    <splitter split-orientation="horizontal" split-proportion="0.5448202">
       <split-first>
-        <leaf>
-          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="firebase.database.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/services/firebase.database.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#228#435#0" expanded="false" />
-                    <element signature="e#520#733#0" expanded="false" />
-                    <element signature="e#813#1015#0" expanded="false" />
-                    <element signature="e#1098#1306#0" expanded="false" />
-                    <element signature="e#1380#1573#0" expanded="false" />
-                    <element signature="e#1648#1843#0" expanded="false" />
-                    <element signature="e#2369#2445#0" expanded="false" />
-                    <element signature="e#2486#2811#0" expanded="false" />
-                    <element signature="e#2858#2997#0" expanded="false" />
-                    <element signature="e#3055#3626#0" expanded="false" />
-                    <element signature="e#3966#4045#0" expanded="false" />
-                    <element signature="e#4088#4435#0" expanded="false" />
-                    <element signature="e#4482#4627#0" expanded="false" />
-                    <element signature="e#4685#5337#0" expanded="false" />
-                    <element signature="e#6335#6832#0" expanded="false" />
-                    <element signature="e#7132#7209#0" expanded="false" />
-                    <element signature="e#7252#7593#0" expanded="false" />
-                    <element signature="e#7839#8357#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="money.module.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/home/money/money.module.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#165#1048#0" expanded="false" />
-                    <element signature="e#1304#4597#0" expanded="false" />
-                    <element signature="e#1395#1581#0" expanded="false" />
-                    <element signature="e#1850#3014#0" expanded="false" />
-                    <element signature="e#2454#2856#0" expanded="false" />
-                    <element signature="e#3071#4314#0" expanded="false" />
-                    <element signature="e#3613#4299#0" expanded="false" />
-                    <element signature="e#4372#4589#0" expanded="false" />
-                    <element signature="e#4926#4974#0" expanded="false" />
-                    <element signature="e#5017#5206#0" expanded="false" />
-                    <element signature="e#5814#6978#0" expanded="false" />
-                    <element signature="e#6264#6963#0" expanded="false" />
-                    <element signature="e#7035#8278#0" expanded="false" />
-                    <element signature="e#7577#8263#0" expanded="false" />
-                    <element signature="e#8336#8549#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="balance.watcher.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/services/balance.watcher.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.16998951">
-                  <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
+        <splitter split-orientation="vertical" split-proportion="0.6429298">
+          <split-first>
+            <leaf>
+              <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+                      <folding>
+                        <element signature="e#224#349#0" expanded="false" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="login.module.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/login/login.module.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="buy.module.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/home/buy/buy.module.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="22" column="17" selection-start-line="14" selection-start-column="38" selection-end-line="22" selection-end-column="17" />
+                      <folding>
+                        <element signature="e#983#2794#0" expanded="false" />
+                        <element signature="e#2855#4669#0" expanded="false" />
+                        <element signature="e#4724#6592#0" expanded="false" />
+                        <element signature="e#6648#6766#0" expanded="false" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="tasks.module.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/home/tasks/tasks.module.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="86" column="56" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
+                      <folding>
+                        <element signature="e#1040#2628#0" expanded="false" />
+                        <element signature="e#2687#4068#0" expanded="false" />
+                        <element signature="e#4123#5730#0" expanded="false" />
+                        <element signature="e#5786#5904#0" expanded="false" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="home.module.js" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/app/home/home.module.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.5771812">
+                      <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+                      <folding>
+                        <element signature="e#1566#4851#0" expanded="false" />
+                        <element signature="e#1730#1808#0" expanded="false" />
+                        <element signature="e#1847#1971#0" expanded="false" />
+                        <element signature="e#2646#2956#0" expanded="false" />
+                        <element signature="e#3007#3290#0" expanded="false" />
+                        <element signature="e#3340#3620#0" expanded="false" />
+                        <element signature="e#3702#4241#0" expanded="false" />
+                        <element signature="e#4286#4837#0" expanded="false" />
+                        <element signature="e#4883#4985#0" expanded="false" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="money.module.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/home/money/money.module.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="434" column="47" selection-start-line="434" selection-start-column="47" selection-end-line="434" selection-end-column="47" />
+                      <folding>
+                        <element signature="e#1711#1769#0" expanded="false" />
+                        <element signature="e#2131#2406#0" expanded="false" />
+                        <element signature="e#2449#3144#0" expanded="false" />
+                        <element signature="e#2596#2676#0" expanded="false" />
+                        <element signature="e#3819#9102#0" expanded="false" />
+                        <element signature="e#9198#13361#0" expanded="false" />
+                        <element signature="e#9241#9340#0" expanded="false" />
+                        <element signature="e#9390#10028#0" expanded="false" />
+                        <element signature="e#10128#10555#0" expanded="false" />
+                        <element signature="e#10800#10893#0" expanded="false" />
+                        <element signature="e#10952#11045#0" expanded="false" />
+                        <element signature="e#11173#11483#0" expanded="false" />
+                        <element signature="e#11531#11741#0" expanded="false" />
+                        <element signature="e#11999#12609#0" expanded="false" />
+                        <element signature="e#12657#13200#0" expanded="false" />
+                        <element signature="e#13277#13342#0" expanded="false" />
+                        <element signature="e#14904#22031#0" expanded="false" />
+                        <element signature="e#15000#18517#0" expanded="false" />
+                        <element signature="e#18704#18930#0" expanded="false" />
+                        <element signature="e#19042#19128#0" expanded="false" />
+                        <element signature="e#19201#20391#0" expanded="false" />
+                        <element signature="e#19846#20050#0" expanded="false" />
+                        <element signature="e#20448#21717#0" expanded="false" />
+                        <element signature="e#22142#25997#0" expanded="false" />
+                        <element signature="e#26224#26272#0" expanded="false" />
+                        <element signature="e#26315#26504#0" expanded="false" />
+                        <element signature="e#26541#26813#0" expanded="false" />
+                        <element signature="e#26874#26999#0" expanded="false" />
+                        <element signature="e#28329#29572#0" expanded="false" />
+                        <element signature="e#28871#29557#0" expanded="false" />
+                        <element signature="e#29630#29847#0" expanded="false" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file leaf-file-name="firebase.find.kit.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/services/firebase.find.kit.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="firebase.database.js" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/app/services/firebase.database.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.3322884">
+                      <caret line="120" column="60" selection-start-line="120" selection-start-column="60" selection-end-line="120" selection-end-column="60" />
+                      <folding>
+                        <element signature="e#1897#2034#0" expanded="false" />
+                        <element signature="e#2121#3744#0" expanded="false" />
+                        <element signature="e#4462#4797#0" expanded="false" />
+                        <element signature="e#4847#6414#0" expanded="false" />
+                        <element signature="e#6441#8126#0" expanded="false" />
+                        <element signature="e#6740#6819#0" expanded="false" />
+                        <element signature="e#6862#7209#0" expanded="false" />
+                        <element signature="e#7256#7401#0" expanded="false" />
+                        <element signature="e#7459#8111#0" expanded="false" />
+                        <element signature="e#8168#8230#0" expanded="false" />
+                        <element signature="e#8284#8585#0" expanded="false" />
+                        <element signature="e#8634#8941#0" expanded="false" />
+                        <element signature="e#8984#9099#0" expanded="false" />
+                        <element signature="e#9134#9181#0" expanded="false" />
+                        <element signature="e#9816#9962#0" expanded="false" />
+                        <element signature="e#10035#10157#0" expanded="false" />
+                        <element signature="e#10261#15341#0" expanded="false" />
+                        <element signature="e#10285#11726#0" expanded="false" />
+                        <element signature="e#11753#13252#0" expanded="false" />
+                        <element signature="e#13294#13354#0" expanded="false" />
+                        <element signature="e#13408#13701#0" expanded="false" />
+                        <element signature="e#13752#14051#0" expanded="false" />
+                        <element signature="e#14094#14205#0" expanded="false" />
+                        <element signature="e#14240#14285#0" expanded="false" />
+                        <element signature="e#14327#15330#0" expanded="false" />
+                        <element signature="e#14913#15059#0" expanded="false" />
+                        <element signature="e#15132#15254#0" expanded="false" />
+                        <element signature="e#15360#17795#0" expanded="false" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="firebase.auth.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/services/firebase.auth.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="0" column="26" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="26" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="balance.watcher.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/services/balance.watcher.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="13" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="4" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="new.day.watcher.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/services/new.day.watcher.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="143" column="20" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="counting.data.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/services/counting.data.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-23.62963">
-                  <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="money.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/home/money/money.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="rashod.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/home/money/rashod/rashod.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/home/home.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-10.962963">
-                  <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dohod.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/home/money/dohod/dohod.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.17494601">
-                  <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="add.new.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/home/money/dialogs/add.new.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
+        <splitter split-orientation="vertical" split-proportion="0.72126144">
+          <split-first>
+            <leaf>
+              <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/index.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="-10.666667">
+                      <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/app/home/home.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.3627907">
+                      <caret line="143" column="58" selection-start-line="143" selection-start-column="58" selection-end-line="143" selection-end-column="58" />
+                      <folding>
+                        <element signature="e#124#3160#0" expanded="false" />
+                        <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#md-content#0;n#!!top" expanded="true" />
+                        <element signature="e#5545#6217#0" expanded="false" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="buy.html" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/home/buy/buy.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="-8.555555">
+                      <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="money.html" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/home/money/money.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="-0.0">
+                      <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="tasks.html" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/home/tasks/tasks.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="-12.0">
+                      <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file leaf-file-name="home.css" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/static/dev/styles/home/home.css">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.074074075">
+                      <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="money.css" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/home/money/money.css">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="buy.css" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/static/dev/styles/home/buy/buy.css">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="column.css" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app/dev/column.css">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="16" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
       </split-second>
     </splitter>
   </component>
@@ -170,63 +348,64 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package_json" />
+        <option value="Html5" />
       </list>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/html/second.html" />
-        <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app/404/404.html" />
-        <option value="$PROJECT_DIR$/app/register/register.module.js" />
-        <option value="$PROJECT_DIR$/app/register/registration.module.js" />
-        <option value="$PROJECT_DIR$/app/registration/registration.html" />
-        <option value="$PROJECT_DIR$/app/registration/registration.module.js" />
-        <option value="$PROJECT_DIR$/lib/config/language.config.js" />
-        <option value="$PROJECT_DIR$/app/home/buy.view/buy.html" />
-        <option value="$PROJECT_DIR$/app/home/buy.view/buy.module.js" />
-        <option value="$PROJECT_DIR$/lib/config/ui.config.js" />
-        <option value="$PROJECT_DIR$/app/home/buy/derective/buy.directive.template.html" />
-        <option value="$PROJECT_DIR$/lib/config/firebaseConfig.js" />
-        <option value="$PROJECT_DIR$/app/login/login.module.js" />
-        <option value="$PROJECT_DIR$/app/home/buy/directive/buy.directive.template.html" />
         <option value="$PROJECT_DIR$/app/home/buy/add.new.dialog.html" />
-        <option value="$PROJECT_DIR$/app/home/buy/actual/buy.actual.html" />
-        <option value="$PROJECT_DIR$/app/home/buy/buy.html" />
         <option value="$PROJECT_DIR$/app/home/buy/completed/buy.completed.html" />
         <option value="$PROJECT_DIR$/app/home/buy/dialogs/purchased.dialog.html" />
-        <option value="$PROJECT_DIR$/app/home/tasks/tasks.html" />
-        <option value="$PROJECT_DIR$/app/home/tasks/tasks.module.js" />
         <option value="$PROJECT_DIR$/app/home/tasks/actual/tasks.actual.html" />
         <option value="$PROJECT_DIR$/app/home/tasks/completed/tasks.completed.html" />
         <option value="$PROJECT_DIR$/app/home/tasks/dialogs/add.new.dialog.html" />
         <option value="$PROJECT_DIR$/app/home/tasks/dialogs/complete.dialog.html" />
         <option value="$PROJECT_DIR$/app/home/tasks/actual/tasks.actual.module.js" />
         <option value="$PROJECT_DIR$/app/home/tasks/completed/tasks.completed.module.js" />
-        <option value="$PROJECT_DIR$/app/home/buy/buy.module.js" />
-        <option value="$PROJECT_DIR$/app/login/login.html" />
-        <option value="$PROJECT_DIR$/app/services/firebase.auth.js" />
         <option value="$PROJECT_DIR$/app/home/money/rashod/rashod.module.js" />
         <option value="$PROJECT_DIR$/app/home/money/dohod/dohod.module.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/app/home/money/money.html" />
         <option value="$PROJECT_DIR$/app/home/money/money.css" />
         <option value="$PROJECT_DIR$/app/home/money/dialogs/add.new.html" />
+        <option value="$PROJECT_DIR$/app/home/buy/completed/buy.completed.module.js" />
+        <option value="$PROJECT_DIR$/app/services/budget.watcher.js" />
+        <option value="$PROJECT_DIR$/app/services/balance.watcher.js" />
+        <option value="$PROJECT_DIR$/lib/config/firebaseConfig.js" />
+        <option value="$PROJECT_DIR$/sass/style.scss" />
+        <option value="$PROJECT_DIR$/app/dev/dev.js" />
         <option value="$PROJECT_DIR$/app/home/money/dohod/dohod.html" />
         <option value="$PROJECT_DIR$/app/home/money/rashod/rashod.html" />
-        <option value="$PROJECT_DIR$/app/home/money/money.module.js" />
-        <option value="$PROJECT_DIR$/app/home/buy/completed/buy.completed.module.js" />
-        <option value="$PROJECT_DIR$/app/home/buy/actual/buy.actual.module.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/app/services/budget.watcher.js" />
-        <option value="$PROJECT_DIR$/app/home/home.html" />
-        <option value="$PROJECT_DIR$/app/services/firebase.database.js" />
-        <option value="$PROJECT_DIR$/app/home/home.module.js" />
         <option value="$PROJECT_DIR$/app/services/new.day.watcher.js" />
-        <option value="$PROJECT_DIR$/app/services/balance.watcher.js" />
+        <option value="$PROJECT_DIR$/app/home/money/dialogs/settings.html" />
+        <option value="$PROJECT_DIR$/app/home/money/dialogs/setAvalableMoney.html" />
+        <option value="$PROJECT_DIR$/app/home/money/money.module.js" />
+        <option value="$PROJECT_DIR$/app/login/login.html" />
+        <option value="$PROJECT_DIR$/app/home/money/money.html" />
+        <option value="$PROJECT_DIR$/static/style.css" />
+        <option value="$PROJECT_DIR$/app/services/verticalResponsive.js" />
+        <option value="$PROJECT_DIR$/lib/mainJS.js" />
+        <option value="$PROJECT_DIR$/app/home/buy/actual/buy.actual.html" />
+        <option value="$PROJECT_DIR$/static/dev/styles/index.css" />
+        <option value="$PROJECT_DIR$/app/dev/column.html" />
+        <option value="$PROJECT_DIR$/app/dev/column.css" />
+        <option value="$PROJECT_DIR$/app/dev/dev.html" />
+        <option value="$PROJECT_DIR$/static/dev/styles/home/home.css" />
+        <option value="$PROJECT_DIR$/app/services/firebase.auth.js" />
+        <option value="$PROJECT_DIR$/app/home/buy/actual/buy.actual.module.js" />
+        <option value="$PROJECT_DIR$/app/login/login.module.js" />
+        <option value="$PROJECT_DIR$/app/services/firebase.find.kit.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/app/home/buy/buy.html" />
+        <option value="$PROJECT_DIR$/app/home/buy/buy.module.js" />
+        <option value="$PROJECT_DIR$/app/home/home.html" />
+        <option value="$PROJECT_DIR$/app/home/tasks/tasks.html" />
+        <option value="$PROJECT_DIR$/app/services/firebase.database.js" />
+        <option value="$PROJECT_DIR$/app/home/tasks/tasks.module.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app/services/counting.data.js" />
+        <option value="$PROJECT_DIR$/app/home/home.module.js" />
       </list>
     </option>
   </component>
@@ -358,8 +537,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -370,18 +549,22 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/dev/styles" />
+      <recent name="$PROJECT_DIR$/static/dev" />
       <recent name="$PROJECT_DIR$/app/home/money" />
       <recent name="$PROJECT_DIR$/app/home/tasks" />
       <recent name="$PROJECT_DIR$/app/home/buy/completed" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/dev/styles/home" />
+      <recent name="$PROJECT_DIR$/static/dev/home/buy" />
       <recent name="$PROJECT_DIR$/app/home/buy/dialogs" />
       <recent name="$PROJECT_DIR$/app/home/buy" />
       <recent name="$PROJECT_DIR$/app/home/buy/derective" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -474,11 +657,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -499,110 +682,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/login/login.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="53" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/home.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/firebase.auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/login/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08658009">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/404/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/registration/registration.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.524659">
-          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/config/language.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/registration/registration.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-22.206896">
           <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/config/firebaseConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31479537">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -627,27 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/buy/completed/buy.completed.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62203026">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/tasks/tasks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34989202">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/buy/buy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/home/tasks/dialogs/complete.dialog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.333333">
@@ -669,13 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/tasks/actual/tasks.actual.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46652266">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/home/tasks/completed/tasks.completed.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20776495">
@@ -683,45 +743,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/tasks/tasks.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58551943">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/config/ui.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05666317">
           <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/login/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.333334">
-          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/login/login.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28331584">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/buy/buy.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30220357">
-          <caret line="29" column="38" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/firebase.auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="26" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -746,48 +771,151 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/money/money.css">
+    <entry file="file://$PROJECT_DIR$/lib/config/firebaseConfig.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.018887723">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.13221405">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/buy/actual/buy.actual.html">
+    <entry file="file://$PROJECT_DIR$/app/home/buy/completed/buy.completed.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52483803">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state vertical-scroll-proportion="-14.666667">
+          <caret line="22" column="14" selection-start-line="2" selection-start-column="4" selection-end-line="22" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/money/rashod/rashod.html">
+    <entry file="file://$PROJECT_DIR$/app/home/buy/completed/buy.completed.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/money/money.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+          <caret line="29" column="52" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/home/money/dialogs/add.new.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4276458">
+          <caret line="22" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/money/dohod/dohod.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20302376">
+          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/money/rashod/rashod.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36933047">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="24" selection-end-line="42" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/money/dialogs/setAvalableMoney.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8552916">
+          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/money/dialogs/settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9719222">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/login/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44708425">
+          <caret line="23" column="96" selection-start-line="23" selection-start-column="96" selection-end-line="23" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/dev/styles/home/buy/buy.css">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/dev/styles/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/money/money.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dev/column.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8651163">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dev/column.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/dev/styles/home/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.074074075">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/mainJS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37775445">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dev/dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15005247">
+          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/login/login.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/firebase.find.kit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/home/buy/actual/buy.actual.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6607595">
+          <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
           <folding>
             <element signature="e#854#2546#0" expanded="false" />
             <element signature="e#2605#4421#0" expanded="false" />
@@ -797,138 +925,247 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/buy/completed/buy.completed.module.js">
+    <entry file="file://$PROJECT_DIR$/app/home/money/money.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <caret line="434" column="47" selection-start-line="434" selection-start-column="47" selection-end-line="434" selection-end-column="47" />
+          <folding>
+            <element signature="e#1711#1769#0" expanded="false" />
+            <element signature="e#2131#2406#0" expanded="false" />
+            <element signature="e#2449#3144#0" expanded="false" />
+            <element signature="e#2596#2676#0" expanded="false" />
+            <element signature="e#3819#9102#0" expanded="false" />
+            <element signature="e#9198#13361#0" expanded="false" />
+            <element signature="e#9241#9340#0" expanded="false" />
+            <element signature="e#9390#10028#0" expanded="false" />
+            <element signature="e#10128#10555#0" expanded="false" />
+            <element signature="e#10800#10893#0" expanded="false" />
+            <element signature="e#10952#11045#0" expanded="false" />
+            <element signature="e#11173#11483#0" expanded="false" />
+            <element signature="e#11531#11741#0" expanded="false" />
+            <element signature="e#11999#12609#0" expanded="false" />
+            <element signature="e#12657#13200#0" expanded="false" />
+            <element signature="e#13277#13342#0" expanded="false" />
+            <element signature="e#14904#22031#0" expanded="false" />
+            <element signature="e#15000#18517#0" expanded="false" />
+            <element signature="e#18704#18930#0" expanded="false" />
+            <element signature="e#19042#19128#0" expanded="false" />
+            <element signature="e#19201#20391#0" expanded="false" />
+            <element signature="e#19846#20050#0" expanded="false" />
+            <element signature="e#20448#21717#0" expanded="false" />
+            <element signature="e#22142#25997#0" expanded="false" />
+            <element signature="e#26224#26272#0" expanded="false" />
+            <element signature="e#26315#26504#0" expanded="false" />
+            <element signature="e#26541#26813#0" expanded="false" />
+            <element signature="e#26874#26999#0" expanded="false" />
+            <element signature="e#28329#29572#0" expanded="false" />
+            <element signature="e#28871#29557#0" expanded="false" />
+            <element signature="e#29630#29847#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/tasks/actual/tasks.actual.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6976744">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dev/dev.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0837209">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/buy/actual/buy.actual.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10697675">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/buy/buy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.555555">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/money/money.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/home/tasks/actual/tasks.actual.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.547744">
-          <caret line="60" column="63" selection-start-line="60" selection-start-column="63" selection-end-line="60" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.962963">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.62963">
-          <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/home.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69884574">
-          <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+        <state vertical-scroll-proportion="1.0628572">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="39" />
           <folding>
-            <element signature="e#1039#1193#0" expanded="false" />
-            <element signature="e#1293#2168#0" expanded="false" />
-            <element signature="e#1596#1820#0" expanded="false" />
-            <element signature="e#1859#1929#0" expanded="false" />
-            <element signature="e#1969#2039#0" expanded="false" />
-            <element signature="e#2080#2153#0" expanded="false" />
+            <element signature="e#862#2464#0" expanded="false" />
+            <element signature="e#2523#3924#0" expanded="false" />
+            <element signature="e#3979#5586#0" expanded="false" />
+            <element signature="e#5642#5760#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/app/home/buy/buy.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-          <folding />
+          <caret line="22" column="17" selection-start-line="14" selection-start-column="38" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="e#983#2794#0" expanded="false" />
+            <element signature="e#2855#4669#0" expanded="false" />
+            <element signature="e#4724#6592#0" expanded="false" />
+            <element signature="e#6648#6766#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/money/dohod/dohod.html">
+    <entry file="file://$PROJECT_DIR$/app/home/tasks/tasks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17494601">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        <state vertical-scroll-proportion="-12.0">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/services/new.day.watcher.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5865687">
-          <caret line="139" column="55" selection-start-line="139" selection-start-column="55" selection-end-line="139" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="143" column="20" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/tasks/tasks.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="56" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
           <folding>
-            <element signature="e#2040#3335#0" expanded="false" />
-            <element signature="e#3876#4058#0" expanded="false" />
-            <element signature="e#4111#4430#0" expanded="false" />
-            <element signature="e#4484#5317#0" expanded="false" />
-            <element signature="e#4543#4900#0" expanded="false" />
+            <element signature="e#1040#2628#0" expanded="false" />
+            <element signature="e#2687#4068#0" expanded="false" />
+            <element signature="e#4123#5730#0" expanded="false" />
+            <element signature="e#5786#5904#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/firebase.auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/balance.watcher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+          <folding>
+            <element signature="e#224#349#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.666667">
+          <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/counting.data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3627907">
+          <caret line="143" column="58" selection-start-line="143" selection-start-column="58" selection-end-line="143" selection-end-column="58" />
+          <folding>
+            <element signature="e#124#3160#0" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#md-content#0;n#!!top" expanded="true" />
+            <element signature="e#5545#6217#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/services/firebase.database.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3322884">
+          <caret line="120" column="60" selection-start-line="120" selection-start-column="60" selection-end-line="120" selection-end-column="60" />
           <folding>
-            <element signature="e#228#435#0" expanded="false" />
-            <element signature="e#520#733#0" expanded="false" />
-            <element signature="e#813#1015#0" expanded="false" />
-            <element signature="e#1098#1306#0" expanded="false" />
-            <element signature="e#1380#1573#0" expanded="false" />
-            <element signature="e#1648#1843#0" expanded="false" />
-            <element signature="e#2369#2445#0" expanded="false" />
-            <element signature="e#2486#2811#0" expanded="false" />
-            <element signature="e#2858#2997#0" expanded="false" />
-            <element signature="e#3055#3626#0" expanded="false" />
-            <element signature="e#3966#4045#0" expanded="false" />
-            <element signature="e#4088#4435#0" expanded="false" />
-            <element signature="e#4482#4627#0" expanded="false" />
-            <element signature="e#4685#5337#0" expanded="false" />
-            <element signature="e#6335#6832#0" expanded="false" />
-            <element signature="e#7132#7209#0" expanded="false" />
-            <element signature="e#7252#7593#0" expanded="false" />
-            <element signature="e#7839#8357#0" expanded="false" />
+            <element signature="e#1897#2034#0" expanded="false" />
+            <element signature="e#2121#3744#0" expanded="false" />
+            <element signature="e#4462#4797#0" expanded="false" />
+            <element signature="e#4847#6414#0" expanded="false" />
+            <element signature="e#6441#8126#0" expanded="false" />
+            <element signature="e#6740#6819#0" expanded="false" />
+            <element signature="e#6862#7209#0" expanded="false" />
+            <element signature="e#7256#7401#0" expanded="false" />
+            <element signature="e#7459#8111#0" expanded="false" />
+            <element signature="e#8168#8230#0" expanded="false" />
+            <element signature="e#8284#8585#0" expanded="false" />
+            <element signature="e#8634#8941#0" expanded="false" />
+            <element signature="e#8984#9099#0" expanded="false" />
+            <element signature="e#9134#9181#0" expanded="false" />
+            <element signature="e#9816#9962#0" expanded="false" />
+            <element signature="e#10035#10157#0" expanded="false" />
+            <element signature="e#10261#15341#0" expanded="false" />
+            <element signature="e#10285#11726#0" expanded="false" />
+            <element signature="e#11753#13252#0" expanded="false" />
+            <element signature="e#13294#13354#0" expanded="false" />
+            <element signature="e#13408#13701#0" expanded="false" />
+            <element signature="e#13752#14051#0" expanded="false" />
+            <element signature="e#14094#14205#0" expanded="false" />
+            <element signature="e#14240#14285#0" expanded="false" />
+            <element signature="e#14327#15330#0" expanded="false" />
+            <element signature="e#14913#15059#0" expanded="false" />
+            <element signature="e#15132#15254#0" expanded="false" />
+            <element signature="e#15360#17795#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/money/money.module.js">
+    <entry file="file://$PROJECT_DIR$/app/home/home.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5771812">
+          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
           <folding>
-            <element signature="e#165#1048#0" expanded="false" />
-            <element signature="e#1304#4597#0" expanded="false" />
-            <element signature="e#1395#1581#0" expanded="false" />
-            <element signature="e#1850#3014#0" expanded="false" />
-            <element signature="e#2454#2856#0" expanded="false" />
-            <element signature="e#3071#4314#0" expanded="false" />
-            <element signature="e#3613#4299#0" expanded="false" />
-            <element signature="e#4372#4589#0" expanded="false" />
-            <element signature="e#4926#4974#0" expanded="false" />
-            <element signature="e#5017#5206#0" expanded="false" />
-            <element signature="e#5814#6978#0" expanded="false" />
-            <element signature="e#6264#6963#0" expanded="false" />
-            <element signature="e#7035#8278#0" expanded="false" />
-            <element signature="e#7577#8263#0" expanded="false" />
-            <element signature="e#8336#8549#0" expanded="false" />
+            <element signature="e#1566#4851#0" expanded="false" />
+            <element signature="e#1730#1808#0" expanded="false" />
+            <element signature="e#1847#1971#0" expanded="false" />
+            <element signature="e#2646#2956#0" expanded="false" />
+            <element signature="e#3007#3290#0" expanded="false" />
+            <element signature="e#3340#3620#0" expanded="false" />
+            <element signature="e#3702#4241#0" expanded="false" />
+            <element signature="e#4286#4837#0" expanded="false" />
+            <element signature="e#4883#4985#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/balance.watcher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16998951">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>

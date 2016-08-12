@@ -1,0 +1,77 @@
+<md-dialog flex="50">
+
+    <md-dialog-content>
+
+        <div layout="column" layout-wrap>
+
+            <p flex="100" class="md-body-1">Enter avalable money</p>
+
+            <div flex="100" class="disabled">
+
+                <div layout="row">
+
+                    <p flex="30" class="md-body-1">Enter nal</p>
+
+                    <md-input-container flex="70">
+
+                        <label>Enter value</label>
+
+                        <input type="number" min="0" ng-model="avalableNal">
+
+                    </md-input-container>
+
+                </div>
+
+            </div>
+
+            <div flex="100">
+
+                <div layout="row">
+
+                    <p flex="30" class="md-body-1">Enter besnal</p>
+
+                    <md-input-container flex="70">
+
+                        <label>Enter value</label>
+
+                        <input type="number" min="0" ng-model="avalableBesnal">
+
+                    </md-input-container>
+
+                </div>
+
+            </div>
+
+            <div flex="100">
+
+                <div layout="row">
+
+                    <p flex="30" class="md-body-1">Enter common</p>
+
+                    <md-input-container flex="70">
+
+                        <label>Enter value</label>
+
+                        <input type="number" min="0" ng-model="avalableCommon">
+
+                    </md-input-container>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </md-dialog-content>
+
+    <md-dialog-actions>
+
+        <md-button ng-click="save()">save</md-button>
+
+        <md-button ng-click="cancel()">cancel</md-button>
+
+    </md-dialog-actions>
+
+</md-dialog>

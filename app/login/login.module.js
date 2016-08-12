@@ -14,17 +14,11 @@ angular.module('login.module',[
 
     })
 
-    .controller('LoginCtrl', ['$scope', '$state', 'firebaseAuth',
-        function($scope, $state, firebaseAuth) {
+    .controller('LoginCtrl', ['$scope', '$state', 'firebaseAuth', 'firebaseDatabase',
+        function($scope, $state, firebaseAuth, firebaseDatabase) {
 
             $scope.userTitle = 'mamudar@mail.ru';
             $scope.userPassword = 'sania4552';
-
-            $scope.testFu = function(){
-
-                console.log(firebaseAuth.user().uid);
-
-            };
 
             $scope.logout = function(){
                 firebaseAuth.logout();
@@ -34,7 +28,7 @@ angular.module('login.module',[
             $scope.login = function(){
                 firebaseAuth.login($scope.userTitle, $scope.userPassword)
                     .then(function(arg){
-                        $state.go('home')
+                        $state.go('home.buy')
                     })
                     .catch(function(error){
 
@@ -45,8 +39,5 @@ angular.module('login.module',[
                 $state.go('registration')
             };
 
-            $scope.goHome = function (){
-                $state.go('home')
-            };
 
         }]);

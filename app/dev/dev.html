@@ -1,0 +1,52 @@
+<md-content layout-fill>
+
+    <style>
+        #index{
+            height: 600px;
+            border : 1px solid black;
+        }
+
+        .first{
+            height: 30px;
+            border: 1px solid darkgreen;
+            background-color: #9E9E9E;
+        }
+
+        .second{
+            height: 60px;
+            border: 1px solid darkgreen;
+            background-color: darkseagreen;
+        }
+
+        .third{
+            border: 1px solid darkgreen;
+            background-color: coral;
+        }
+
+        .third2{
+            border: 1px solid darkgreen;
+            background-color: darkslategray;
+        }
+
+        .third3{
+            border: 1px solid darkgreen;
+            background-color: blueviolet;
+        }
+
+
+    </style>
+
+    <div layout="column" layout-fill>
+        <div class="first" flex="none">First item in column</div>
+        <div class="second" flex="none">Second item in column</div>
+        <div class="third" flex>
+            <div class="third2" layout="row" layout-fill>
+                <div class="third3" flex="50">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</md-content>

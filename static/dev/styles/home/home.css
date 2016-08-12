@@ -1,0 +1,28 @@
+html {
+    height: 100%
+}
+
+body {
+    height: 100%
+}
+
+.maxHeight{
+    height:100%
+}
+
+.maxWidth{
+    width: 100%
+}
+
+.overHidden{
+    overflow : hidden;
+}
+
+#buy{
+    overflow : scroll;
+    overflow-x: hidden;
+}
+
+.displayFlex{
+    display: flex;
+}

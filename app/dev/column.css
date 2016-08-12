@@ -1,0 +1,22 @@
+#index{
+    height: 600px;
+    border : 1px solid black;
+}
+
+.first{
+    height: 30px;
+    border: 1px solid darkgreen;
+    background-color: #9E9E9E;
+}
+
+.second{
+     height: 60px;
+     border: 1px solid darkgreen;
+     background-color: darkseagreen;
+ }
+
+.third{
+    border: 1px solid darkgreen;
+    background-color: coral;
+}
+
