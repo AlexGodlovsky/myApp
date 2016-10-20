@@ -1,9 +1,64 @@
-<div layout="row" id="dohodCont" layout-wrap layout-fill>
+<!--<div flex style="background-color: #9E9E9E">
+    <div layout="row">
+        <p flex>test</p>
+    </div>
+</div>-->
 
-    <md-button ng-click="addNew($event)" class="md-icon-button"
-               aria-label="Open sample menu">
-        <md-icon> menu </md-icon>
-    </md-button>
+
+<div flex="nogrow">
+    <div layout="row" id="dohodCont" layout-wrap>
+
+        <p flex class="md-title">Dohod</p>
+
+        <p flex="10" class="md-title">{{value}}</p>
+
+    </div>
+</div>
+
+<md-divider></md-divider>
+
+<md-list flex>
+
+    <md-list-item ng-repeat=" item in dohodDb">
+
+        <div layout="row" layout-fill layout-wrap>
+
+            <p flex>{{item.name}}</p>
+
+            <p flex="10">{{item.value}}</p>
+
+            <md-menu flex="10">
+                <!-- Trigger element is a md-button with an icon -->
+                <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open sample menu">
+                    <md-icon> menu </md-icon>
+                </md-button>
+                <md-menu-content>
+
+                    <md-menu-item>
+
+                        <md-button ng-click="startEdit($event, item)">Edit</md-button>
+
+                        <md-button ng-click="startDelet($event, item)">Delet</md-button>
+
+                    </md-menu-item>
+
+                </md-menu-content>
+            </md-menu>
+
+        </div>
+
+    </md-list-item>
+
+</md-list>
+
+<md-button id="addNewBuy" class="md-fab md-primary md-hue-2"
+           aria-label="Add new item" ng-click="addNew()">
+    <md-icon class="material-icons md-light md-48"> &#xE145; </md-icon>
+</md-button>
+
+
+<!--
+<div layout="row" id="dohodCont" layout-wrap>
 
     <p flex class="md-title">Expenditure</p>
 
@@ -25,7 +80,7 @@
                         <p flex="10">{{item.value}}</p>
 
                         <md-menu flex="10">
-                            <!-- Trigger element is a md-button with an icon -->
+                            &lt;!&ndash; Trigger element is a md-button with an icon &ndash;&gt;
                             <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open sample menu">
                                 <md-icon> menu </md-icon>
                             </md-button>
@@ -51,4 +106,6 @@
         </div>
     </div>
 
-</div>
+</div>-->
+
+

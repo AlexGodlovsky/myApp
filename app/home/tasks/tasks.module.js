@@ -127,6 +127,10 @@ angular.module('tasks.module',[
 
             };
 
+            $scope.cancelCompleted = function (event, item) {
+                db.cancelComplete(item)
+            };
+
             $scope.startEdit = function(event, item){
 
                 $mdDialog.show({

@@ -56,14 +56,11 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
         })
     });
 
+    var mainDb = false;
+
     var pokupki = false;
 
     var tasks = false;
-
-
-
-
-
 
     return {
 
@@ -114,6 +111,38 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
         },
 
         main : {
+
+            initMainDb : function (){
+
+                var deferred = $q.defer();
+
+                if(mainDb){
+                    deferred.resolve(mainDb);
+                }
+                else{
+
+                    findKit.kitsId()
+                        .then(function(kitId){
+                            $firebaseObject(db.ref('/kits/' + kitId + '/day/list'))
+                                .$loaded(function(obj){
+                                    mainDb = obj;
+                                    deferred.resolve(mainDb)
+                                })
+                                .catch(function(err){
+                                    console.log(err);
+                                    deferred.reject(err)
+                                })
+                        })
+                        .catch(function(err){
+                            console.log(err);
+                            deferred.reject(err)
+                        });
+                }
+
+                return deferred.promise
+
+            },
+
             getList : function () {
                 var deferred = $q.defer();
 
@@ -277,6 +306,19 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
                 return pokupki.$save(index);
             },
 
+            editPurchasedItem : function (item, editedItem) {
+
+                var it = pokupki.$getRecord(item.$id);
+
+                var index = pokupki.$indexFor(it.$id);
+
+                for(var field in editedItem){
+                    pokupki[index][field] = editedItem[field];
+                }
+
+                return pokupki.$save(index);
+            },
+
             purchasing : function(editedItem) {
 
                 var it = pokupki.$getRecord(editedItem.$id);
@@ -286,6 +328,17 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
                 for(var field in editedItem){
                     pokupki[index][field] = editedItem[field];
                 }
+
+                return pokupki.$save(index);
+            },
+
+            cancelPurchase : function (item) {
+
+                var it = pokupki.$getRecord(item.$id);
+
+                var index = pokupki.$indexFor(it.$id);
+
+                pokupki[index].purchased = false;
 
                 return pokupki.$save(index);
             },
@@ -463,6 +516,17 @@ app.factory('firebaseDatabase', function(firebaseAuth, $firebaseObject, $firebas
                 for(var field in editedItem){
                     tasks[index][field] = editedItem[field];
                 }
+
+                return tasks.$save(index);
+            },
+
+            cancelComplete : function (item){
+
+                var it = tasks.$getRecord(item.$id);
+
+                var index = tasks.$indexFor(it.$id);
+
+                tasks[index].completed = false;
 
                 return tasks.$save(index);
             },

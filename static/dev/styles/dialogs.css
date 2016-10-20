@@ -1,0 +1,8 @@
+md-dialog{
+    padding : 20px;
+    padding-bottom: 10px;
+}
+
+md-dialog-content{
+    overflow-x: hidden;
+}

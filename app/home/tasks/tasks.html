@@ -1,49 +1,73 @@
-<div layout="column" layout-fill>
+<div layout="column" class="maxWidth">
 
-    <div height="30px" flex md-swipe-left="cangeState()" md-swipe-right="cangeState()"></div>
+    <div flex id="task">
 
-    <div flex>
+        <div ng-repeat="item in list" layout="row" class="taskItem"
+             ng-class="item.completed == true ? 'completed' : false">
 
-        <div layout="row" layout-fill>
+            <p flex>{{item.description}}</p>
 
-            <a flex="5" class=" material-icons md-headline md-button md-ink-ripple flex" ng-click="addNew()">add_box</a>
+            <md-menu md-position-mode="target-right target" >
 
-            <span flex="75" class="md-headline subHead">{{view | uppercase}}</span>
-
-            <a flex="20" class="md-headline md-button md-ink-ripple flex" ng-click="changeState()">&gt;</a>
-
-        </div>
-
-    </div>
-
-    <!--<div ui-view flex></div>-->
-
-    <div flex>
-
-        <div ng-repeat="item in list" layout="row">
-
-            <md-menu >
-                <!-- Trigger element is a md-button with an icon -->
                 <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open sample menu">
-                    <md-icon> menu </md-icon>
+                    <md-icon md-menu-origin>&#xE5D4;</md-icon>
                 </md-button>
-                <md-menu-content>
+
+                <md-menu-content class="listMenu">
+
+                    <md-menu-item ng-class="item.completed === true ? 'hideItem' : 'showItem'">
+
+                        <md-button ng-click="startComplete($event, item)">
+                            <div class="menuItem" layout="row" flex>
+                                <p flex>Completed</p>
+                                <md-icon class="customMenuIcon" md-menu-align-target>&#xE5CA;</md-icon>
+                            </div>
+                        </md-button>
+
+                    </md-menu-item>
+
+                    <md-menu-item ng-class="item.completed === true ? 'showItem' : 'hideItem'">
+
+                        <md-button ng-click="cancelCompleted($event, item)">
+                            <div class="menuItem" layout="row" flex>
+                                <p flex>Cancel</p>
+                                <md-icon class="customMenuIcon" md-menu-align-target>&#xE5CA;</md-icon>
+                            </div>
+                        </md-button>
+
+                    </md-menu-item>
 
                     <md-menu-item>
 
-                        <md-button ng-click="startComplete($event, item)">Complete</md-button>
+                        <md-button ng-click="startEdit($event, item)">
+                            <div class="menuItem" layout="row" flex>
+                                <p flex>Edit</p>
+                                <md-icon class="customMenuIcon" md-menu-align-target>&#xE3C9;</md-icon>
+                            </div>
+                        </md-button>
 
-                        <md-button ng-click="startEdit($event, item)">Edit</md-button>
+                    </md-menu-item>
 
-                        <md-button ng-click="startDelet($event, item)">Delet</md-button>
+                    <md-menu-item>
+
+                        <md-button  ng-click="startDelet($event, item)">
+                            <div class="menuItem" layout="row" flex>
+                                <p flex>Delet</p>
+                                <md-icon class="customMenuIcon" md-menu-align-target>&#xE14C;</md-icon>
+                            </div>
+                        </md-button>
 
                     </md-menu-item>
 
                 </md-menu-content>
             </md-menu>
 
-            <p flex>{{item.description}}</p>
         </div>
+
+        <md-button id="addNewBuy" class="md-fab md-primary md-hue-2"
+                   aria-label="Add new item" ng-click="addNew()">
+            <md-icon class="material-icons md-light md-48"> &#xE145; </md-icon>
+        </md-button>
 
     </div>
 

@@ -1,33 +1,64 @@
-<div layout="row" layout-wrap>
-    <link rel="stylesheet" href="app/home/money/money.css">
+<div class="maxWidth" layout="column">
 
-<div flex="100">
+    <!--<div flex="none" id="balanceCont">
 
-    <div layout="row" layout-fill>
+        <div id="balance" layout="row" layout-fill>
 
-        <md-button class="md-icon-button" ng-click="setAvalableMoney()"
-                   aria-label="Edit avalable money">
-            <md-icon class="material-icons">menu</md-icon>
-        </md-button>
+            <p class="md-title">Available money</p>
 
-        <p class="md-title" flex="80">Available money</p>
+            <span flex></span>
 
-        <p class="md-title" flex>{{money | number:2}}</p>
+            <p class="md-title">{{money | number:2}}</p>
 
-    </div>
+            <md-button ng-click="setAvalableMoney()" class="md-icon-button dialBtn"
+                       aria-label="Open sample menu">
+                <md-icon>&#xE5D4;</md-icon>
+            </md-button>
 
-    <div layout="row" layout-fill>
+        </div>
 
-        <md-button ng-click="openSettings()" class="md-raised md-primary">
-            Open settings
-        </md-button>
+    </div>-->
 
+    <div class="displayFlex" flex>
+        <div class="maxWidth" layout="row">
+
+            <div class="displayFlex" flex="50">
+                <div class="maxWidth" layout="column"  ui-view="dohod"></div>
+            </div>
+
+            <div flex="50" ui-view="rashod"></div>
+
+        </div>
     </div>
 
 </div>
 
+
+
+
+
+<!--<div class="maxWidth" layout="row" layout-wrap>
+
+    <div flex="100">
+
+        <div id="balance" layout="row" layout-fill>
+
+            <p class="md-title">Available money</p>
+
+            <span flex></span>
+
+            <p class="md-title">{{money | number:2}}</p>
+
+            <md-button ng-click="setAvalableMoney()" class="md-icon-button dialBtn"
+                       aria-label="Open sample menu">
+                <md-icon>&#xE5D4;</md-icon>
+            </md-button>
+
+        </div>
+
+    </div>
 
     <div flex="50" ui-view="dohod"></div>
-    <div flex="50" ui-view="rashod"></div>
-</div>
 
+    <div flex="50" ui-view="rashod"></div>
+</div>-->

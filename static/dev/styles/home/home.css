@@ -18,11 +18,18 @@ body {
     overflow : hidden;
 }
 
-#buy{
-    overflow : scroll;
-    overflow-x: hidden;
-}
-
 .displayFlex{
     display: flex;
+}
+
+#balanceCont{
+    height: 63px;
+}
+
+#balance {
+    padding : 0 8px;
+}
+
+#balance > .dialBtn{
+    margin: 12px 0 0 8px;
 }

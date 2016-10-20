@@ -143,54 +143,111 @@ angular.module('buy.module',[
 
             $scope.startEdit = function(event, item){
 
-                $mdDialog.show({
-                    controller: EditItemContr,
-                    templateUrl : 'app/home/buy/dialogs/add.new.dialog.html',
-                    parent: angular.element(document.body),
-                    targetEvent: event,
-                    clickOutsideToClose:true,
-                    fullscreen: true,
-                    locals : {
-                        item : item
-                    }
-                });
+                if(item.purchased == true){
 
-                function EditItemContr($scope, $mdDialog, item) {
+                    $mdDialog.show({
+                        controller: EditPurchasedItemContr,
+                        templateUrl : 'app/home/buy/dialogs/purchased.dialog.html',
+                        parent: angular.element(document.body),
+                        targetEvent: event,
+                        clickOutsideToClose:true,
+                        fullscreen: true,
+                        locals : {
+                            item : item
+                        }
+                    });
 
-                    $scope.dialogName = item.name;
+                    function EditPurchasedItemContr($scope, $mdDialog, firebaseDatabase, item) {
 
-                    $scope.dialogAmount = Number(item.amount);
+                        $scope.dialogName = item.name;
 
-                    $scope.dialogMeasure = item.measure;
+                        $scope.dialogAmount = Number(item.amount);
 
-                    $scope.dialogExpiryDate = new Date(item.expiredate);
+                        $scope.dialogMeasure = item.measure;
 
-                    $scope.saveNew = function() {
+                        $scope.dialogPlace = item.place;
 
-                        var editedItem = {
-                            name : $scope.dialogName,
-                            amount : $scope.dialogAmount,
-                            measure : $scope.dialogMeasure,
-                            expiredate : $scope.dialogExpiryDate.toString(),
-                            createdate : item.createdate,
-                            purchased : false,
-                            place : '',
-                            price : 0,
-                            purchasedDate : false
+                        $scope.dialogPrice = Number(item.price);
+
+                        $scope.save = function() {
+
+                            var editedItem = {
+                                name : $scope.dialogName,
+                                amount : $scope.dialogAmount,
+                                measure : $scope.dialogMeasure,
+                                edited : new Date().toString(),
+                                place : $scope.dialogPlace,
+                                price : Number($scope.dialogPrice)
+                            };
+
+                            db.editPurchasedItem(item, editedItem)
+                                .then(function(res){
+                                    $mdDialog.hide()
+                                })
+                                .catch(function (err){
+                                    console.log(err)
+                                })
                         };
 
-                        db.editItem(item, editedItem)
-                            .then(function(res){
-                                $mdDialog.hide()
-                            })
-                            .catch(function (err){
-                                console.log(err)
-                            })
-                    };
+                        $scope.cancelDialog = function() {
+                            $mdDialog.cancel();
+                        };
 
-                    $scope.cancelDialog = function() {
-                        $mdDialog.cancel();
-                    };
+                    }
+
+                }
+                else{
+
+                    $mdDialog.show({
+                        controller: EditItemContr,
+                        templateUrl : 'app/home/buy/dialogs/add.new.dialog.html',
+                        parent: angular.element(document.body),
+                        targetEvent: event,
+                        clickOutsideToClose:true,
+                        fullscreen: true,
+                        locals : {
+                            item : item
+                        }
+                    });
+
+                    function EditItemContr($scope, $mdDialog, item) {
+
+                        $scope.dialogName = item.name;
+
+                        $scope.dialogAmount = Number(item.amount);
+
+                        $scope.dialogMeasure = item.measure;
+
+                        $scope.dialogExpiryDate = new Date(item.expiredate);
+
+                        $scope.saveNew = function() {
+
+                            var editedItem = {
+                                name : $scope.dialogName,
+                                amount : $scope.dialogAmount,
+                                measure : $scope.dialogMeasure,
+                                expiredate : $scope.dialogExpiryDate.toString(),
+                                createdate : item.createdate,
+                                purchased : false,
+                                place : '',
+                                price : 0,
+                                purchasedDate : false
+                            };
+
+                            db.editItem(item, editedItem)
+                                .then(function(res){
+                                    $mdDialog.hide()
+                                })
+                                .catch(function (err){
+                                    console.log(err)
+                                })
+                        };
+
+                        $scope.cancelDialog = function() {
+                            $mdDialog.cancel();
+                        };
+
+                    }
 
                 }
 
@@ -203,6 +260,10 @@ angular.module('buy.module',[
 
                     })
 
+            };
+
+            $scope.cancelPurchased = function (event, item) {
+                db.cancelPurchase(item)
             };
 
             $scope.list = db.getList();

@@ -1,29 +1,36 @@
-app.factory('newDayWatcher', function($firebaseObject, $firebaseArray, firebaseAuth, $timeout){
+app.factory('newDayWatcher', function($firebaseObject, $firebaseArray, firebaseAuth, findKit, countingData){
 
     var db = firebase.database();
 
-    var currentDay = firebaseAuth.waitForSignIn.then(function(){
-        var uid = firebaseAuth.userUid();
+    var currentDay = false;
 
-        $firebaseObject(db.ref('/kits/'+uid+'/day/list/'))
-            .$loaded(function(list){
 
-                currentDay = list;
+    firebaseAuth.waitForSignIn.then(function(){
 
-                setInterval(function(){
-                    checkNewDay()
-                },60000);
+        findKit.kitsId()
+            .then(function(kitId){
+                $firebaseObject(db.ref('/kits/'+kitId+'/day/list/'))
+                    .$loaded(function(list){
 
-                checkNewDay();
+                        currentDay = list;
 
-                currentDay.$watch(function(){
-                    checkNewDay()
-                })
+                        setInterval(function(){
+                            checkNewDay()
+                        },60000);
+
+                        checkNewDay();
+
+                        currentDay.$watch(function(){
+                            checkNewDay()
+                        })
+                    })
+                    .catch(function(error){
+                        console.log(error)
+                    })
             })
-            .catch(function(error){
-                console.log(error)
+            .catch(function(err){
+                console.log(err)
             })
-
     });
 
     function checkNewDay () {
@@ -49,13 +56,27 @@ app.factory('newDayWatcher', function($firebaseObject, $firebaseArray, firebaseA
 
         function initNewDay () {
 
-            var uid = firebaseAuth.userUid();
+            findKit.kitsId()
+                .then(function(kitId){
+                    $firebaseObject(db.ref('/kits/'+kitId+'/archive/'))
+                        .$loaded(function (arch){
+                            addNewArchiveItem(arch)
+                        })
+                        .catch(function(error){
+                            console.log(error)
+                        })
+                })
+                .catch(function(err){
+                    console.log(err)
+                });
+
+            /*var uid = firebaseAuth.userUid();
 
             var archive = $firebaseObject(db.ref('/kits/'+uid+'/archive/'));
 
             archive.$loaded(function (res2){
                 addNewArchiveItem(res2)
-            });
+            });*/
 
             function addNewArchiveItem (archive){
 
@@ -83,15 +104,37 @@ app.factory('newDayWatcher', function($firebaseObject, $firebaseArray, firebaseA
 
                 function getNewArchiveItem () {
 
+                    function getCompletedTask (list){
+
+                        var newList = {};
+
+                        for(var item in list){
+                            if(list[item].completed === true){
+                                newList[item] =  list[item]
+                            }
+                        }
+
+                        return newList;
+                    }
+
+                    function getCompletedBuy (list){
+
+                        var newList = {};
+
+                        for(var item in list){
+                            if(list[item].purchased === true){
+                                newList[item] =  list[item]
+                            }
+                        }
+
+                        return newList;
+                    }
+
                     var result = {
 
-                        delalist : {
-                            completed : currentDay.delalist.completed
-                        },
+                        delalist : getCompletedTask(currentDay.delalist),
 
-                        pokupkilist : {
-                            completed : currentDay.pokupkilist.completed
-                        },
+                        pokupkilist : getCompletedBuy(currentDay.pokupkilist),
 
                         budget : {
                             dohod : currentDay.budget.dohod,
@@ -107,11 +150,11 @@ app.factory('newDayWatcher', function($firebaseObject, $firebaseArray, firebaseA
 
                     };
 
-                    if(!currentDay.delalist.completed){
+                    if(!currentDay.delalist){
                         delete result.delalist
                     }
 
-                    if(!currentDay.pokupkilist.completed){
+                    if(!currentDay.pokupkilist){
                         delete result.pokupkilist
                     }
 
@@ -133,9 +176,9 @@ app.factory('newDayWatcher', function($firebaseObject, $firebaseArray, firebaseA
 
                     currentDay.budget.dengi.dayLimit = setDayLimitMode(currentDay.budget.dengi.dayLimit);
 
-                    currentDay.delalist.completed = {};
+                    clearDelalist(currentDay.delalist);
 
-                    currentDay.pokupkilist.completed = {};
+                    clearPokupkilist(currentDay.pokupkilist);
 
                     currentDay.budget.dohod = {};
 
@@ -144,6 +187,25 @@ app.factory('newDayWatcher', function($firebaseObject, $firebaseArray, firebaseA
                     currentDay.$save().then(function(){
                         console.log('Day cleared.')
                      });
+
+                    function clearDelalist (list) {
+                        for(var item in list){
+                            if(list[item].completed === true){
+                                delete list[item]
+                            }
+                        }
+
+                        return list
+                    };
+
+                    function clearPokupkilist (list) {
+
+                        for(var item in list){
+                            if(list[item].purchased === true){
+                                delete list[item]
+                            }
+                        }
+                    };
 
                     function setDayLimitMode (dayLimit) {
 
@@ -178,7 +240,6 @@ app.factory('newDayWatcher', function($firebaseObject, $firebaseArray, firebaseA
 
                         }
                     }
-
 
                     function setNewStartMoney () {
 
@@ -216,23 +277,23 @@ app.factory('newDayWatcher', function($firebaseObject, $firebaseArray, firebaseA
                                 return res;
                             }
 
-                            var list = currentDay.budget.rashod;
+                            var allRashod = countingData.rashodSum(currentDay);
 
-                            var allRashod = 0;
+                            var allPokupki = countingData.pokupkiSum(currentDay);
 
-                            var allPokupki = getOldAllPokupki();
+                            /*var list = currentDay.budget.rashod;
 
                             for(var prop in list){
                                 allRashod += Number(list[prop].value)
-                            }
+                            }*/
 
                             return allRashod + allPokupki
                         }
 
 
-                        var currentStartMoney = getOldStartMoney();
+                        var currentStartMoney = countingData.startMoney(currentDay);
 
-                        var currentAllDohod = getOldAllDohod();
+                        var currentAllDohod = countingData.dohodSum(currentDay);
 
                         var currentAllRashod = getOldAllRashod();
 

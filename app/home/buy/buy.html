@@ -1,52 +1,77 @@
 <div layout="column" class="maxWidth">
 
-    <div flex="none" id="buyIndicator">
-
-        <div layout="row" layout-fill>
-
-            <a flex="5" class=" material-icons md-headline md-button md-ink-ripple flex" ng-click="addNew()">add_box</a>
-
-            <span flex="75" class="md-headline subHead">{{view | uppercase}}</span>
-
-            <a flex="20" class="md-headline md-button md-ink-ripple flex" ng-click="changeState()">&gt;</a>
-
-        </div>
-
-    </div>
-
-    <!--<div id="buy" ui-view flex></div>-->
-
     <div id="buy" flex>
 
-        <div ng-repeat="item in list" layout="row">
+        <div ng-repeat="item in list" layout="row" class="buyItem"
+             ng-class="item.purchased == true ? 'purchased' : false">
 
-            <md-menu >
-                <!-- Trigger element is a md-button with an icon -->
+            <p flex>{{item.name}}</p>
+
+            <p id="buyItemAmount" flex="10">{{item.amount}}</p>
+
+            <p id="buyItemMeasure" flex="10">{{item.measure}}</p>
+
+            <md-menu md-position-mode="target-right target" >
+
                 <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open sample menu">
-                    <md-icon> menu </md-icon>
+                    <md-icon md-menu-origin>&#xE5D4;</md-icon>
                 </md-button>
-                <md-menu-content>
+
+                <md-menu-content class="listMenu">
+
+                    <md-menu-item ng-class="item.purchased === true ? 'hideItem' : 'showItem'">
+
+                        <md-button ng-click="startPurchasing($event, item)">
+                            <div class="menuItem" layout="row" flex>
+                                <p flex>Purchase</p>
+                                <md-icon class="customMenuIcon" md-menu-align-target>&#xE227;</md-icon>
+                            </div>
+                        </md-button>
+
+                    </md-menu-item>
+
+                    <md-menu-item ng-class="item.purchased === true ? 'showItem' : 'hideItem'">
+
+                        <md-button ng-click="cancelPurchased($event, item)">
+                            <div class="menuItem" layout="row" flex>
+                                <p flex>Cancel</p>
+                                <md-icon class="customMenuIcon" md-menu-align-target>&#xE227;</md-icon>
+                            </div>
+                        </md-button>
+
+                    </md-menu-item>
 
                     <md-menu-item>
 
-                        <md-button ng-click="startPurchasing($event, item)">Complete</md-button>
+                        <md-button ng-click="startEdit($event, item)">
+                            <div class="menuItem" layout="row" flex>
+                                <p flex>Edit</p>
+                                <md-icon class="customMenuIcon" md-menu-align-target>&#xE3C9;</md-icon>
+                            </div>
+                        </md-button>
 
-                        <md-button ng-click="startEdit($event, item)">Edit</md-button>
+                    </md-menu-item>
 
-                        <md-button ng-click="startDelet($event, item)">Delet</md-button>
+                    <md-menu-item>
+
+                        <md-button  ng-click="startDelet($event, item)">
+                            <div class="menuItem" layout="row" flex>
+                                <p flex>Delet</p>
+                                <md-icon class="customMenuIcon" md-menu-align-target>&#xE14C;</md-icon>
+                            </div>
+                        </md-button>
 
                     </md-menu-item>
 
                 </md-menu-content>
             </md-menu>
 
-            <p flex>{{item.name}}</p>
-
-            <p flex="10">{{item.amount}}</p>
-
-            <p flex="10">{{item.measure}}</p>
-
         </div>
+
+        <md-button id="addNewBuy" class="md-fab md-primary md-hue-2"
+                   aria-label="Add new item" ng-click="addNew()">
+            <md-icon class="material-icons md-light md-48"> &#xE145; </md-icon>
+        </md-button>
 
     </div>
 
